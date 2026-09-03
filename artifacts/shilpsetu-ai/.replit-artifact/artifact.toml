@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "ShilpSetu AI"
+description = "A mobile-first AI business assistant for rural artisans to create, price, publish and sell handmade products through a guided digital journey."
+version = "1.0.0"
+id = "artifacts/shilpsetu-ai"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21913
+
+[services.development]
+run = "pnpm --filter @workspace/shilpsetu-ai run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/shilpsetu-ai", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/shilpsetu-ai/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21913"
+BASE_PATH = "/"

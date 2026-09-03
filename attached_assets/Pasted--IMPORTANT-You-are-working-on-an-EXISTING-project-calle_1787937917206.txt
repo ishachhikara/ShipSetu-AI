@@ -1,0 +1,947 @@
+## IMPORTANT
+
+You are working on an EXISTING project called **ShilpSetu AI**.
+
+Do NOT create a new project from scratch.
+
+Keep the existing visual identity, landing page, typography, layout style and overall design. Improve and expand the existing application into a complete **12-screen mobile-first prototype** for Smart India Hackathon problem statement:
+
+**SIH26090 – AI-Driven Market Linkage and Smart Cataloging Mobile Application for Marginalized Artisans**
+
+The application should look like a polished startup MVP suitable for an SIH demonstration.
+
+---
+
+# APP NAME
+
+**ShilpSetu AI**
+
+Tagline:
+
+**From Your Craft to the World**
+
+Main purpose:
+
+Help marginalized artisans easily digitize their handmade products, create professional multilingual catalogues, get smart pricing suggestions and connect with potential buyers.
+
+---
+
+# IMPORTANT DESIGN RULE
+
+The existing landing page has a dark green/cream artisan-inspired visual style.
+
+KEEP THIS VISUAL IDENTITY.
+
+Do not replace the current design with a generic template.
+
+Use the existing:
+
+* typography
+* rounded elements
+* dark green / cream style
+* artisan-inspired aesthetic
+* spacing
+* visual hierarchy
+
+Improve consistency across all new screens.
+
+Make the application:
+
+* mobile-first
+* responsive
+* simple for rural/semi-digital users
+* accessible
+* visually polished
+* easy to navigate
+
+Use large buttons and minimal typing.
+
+---
+
+# CREATE THESE 12 SCREENS
+
+1. Welcome / Landing
+2. Language & Artisan Registration
+3. Artisan Dashboard
+4. Add Product
+5. AI Photo Studio
+6. AI Catalogue Generator
+7. Smart Pricing Assistant
+8. Product Preview & Publish
+9. AI Market Linkage
+10. Buyer Details & Send Offer
+11. Orders & Inventory
+12. AI Business Coach
+
+All screens must be connected.
+
+---
+
+# SCREEN 1 — WELCOME / LANDING
+
+KEEP AND IMPROVE THE EXISTING LANDING PAGE.
+
+Show:
+
+ShilpSetu AI
+
+**From Your Craft to the World**
+
+Description:
+
+"AI-powered tools that help artisans create, price and sell their products."
+
+Primary button:
+
+**Start Your Journey →**
+
+Secondary option:
+
+**Explore Demo**
+
+Add three small feature cards:
+
+📸 Create Better Listings
+
+💰 Price Smarter
+
+🎯 Find Buyers
+
+The landing page should immediately communicate the problem and solution.
+
+---
+
+# SCREEN 2 — LANGUAGE & ARTISAN REGISTRATION
+
+After Start Your Journey:
+
+Show:
+
+**Choose Your Language**
+
+Buttons:
+
+🇮🇳 हिन्दी
+
+🇬🇧 English
+
+ਪੰਜਾਬੀ
+
+Then show:
+
+**Create Your Artisan Profile**
+
+Fields:
+
+Name
+Location
+Craft Type
+Years of Experience
+
+Sample data:
+
+Name:
+Meena Devi
+
+Location:
+Sonipat, Haryana
+
+Craft:
+Bamboo Handicrafts
+
+Experience:
+8 years
+
+Add:
+
+🎙️ **Register using Voice**
+
+Button:
+
+**Create My Profile →**
+
+After clicking, go to Dashboard.
+
+---
+
+# SCREEN 3 — ARTISAN DASHBOARD
+
+Title:
+
+**Good Morning, Meena 👋**
+
+Subtitle:
+
+"Let's grow your craft business."
+
+Create four statistics:
+
+Products Listed
+12
+
+Buyer Enquiries
+5
+
+Orders
+7
+
+Estimated Sales
+₹18,500
+
+Large main button:
+
+**+ Add New Product**
+
+Add an AI card:
+
+🤖 **ShilpSetu AI Coach**
+
+"Need help with pricing, products or customers?"
+
+Button:
+
+**Ask AI Coach**
+
+Add:
+
+### Recent Activity
+
+🎯 New buyer interested in your bamboo baskets
+
+💰 New pricing suggestion available
+
+📦 Order #1024 received
+
+Bottom navigation:
+
+Home | Products | Buyers | Orders | Profile
+
+Bottom navigation must work.
+
+---
+
+# SCREEN 4 — ADD PRODUCT
+
+Title:
+
+**Add Your Product**
+
+Subtitle:
+
+"Tell us about your craft. We'll handle the rest."
+
+Create three large options:
+
+📷
+**Take Product Photo**
+
+🖼️
+**Upload Photo**
+
+🎙️
+**Describe by Voice**
+
+Add a description box.
+
+Placeholder:
+
+"Example: Ye bamboo ki handmade basket hai..."
+
+Add microphone button.
+
+Sample image can be used.
+
+Primary button:
+
+**Generate with AI →**
+
+When clicked, go to AI Photo Studio.
+
+---
+
+# SCREEN 5 — AI PHOTO STUDIO
+
+Title:
+
+**AI Photo Studio**
+
+Subtitle:
+
+"Make your product marketplace-ready."
+
+Show a BEFORE and AFTER comparison.
+
+Before:
+Ordinary artisan product photograph.
+
+After:
+Clean marketplace-style product photograph.
+
+Show processing checklist:
+
+✓ Background cleaned
+
+✓ Lighting enhanced
+
+✓ Product centered
+
+✓ Image optimized
+
+Add a progress animation/loading state when entering the page.
+
+Buttons:
+
+**Use Enhanced Photo →**
+
+**Retake Photo**
+
+Use Enhanced Photo → Catalogue Generator.
+
+If real image AI is not configured, simulate the enhancement convincingly.
+
+Do NOT make the feature appear broken.
+
+---
+
+# SCREEN 6 — AI CATALOGUE GENERATOR
+
+Title:
+
+**✨ AI Generated Catalogue**
+
+Subtitle:
+
+"Created from your photo and voice description."
+
+Show editable fields:
+
+Product Name:
+Handmade Bamboo Basket
+
+Category:
+Home Décor
+
+Material:
+Bamboo
+
+Craft Type:
+Handwoven
+
+Origin:
+Haryana
+
+Description:
+
+"Beautiful handwoven bamboo basket crafted by skilled rural artisans. Lightweight, durable and suitable for home décor and storage."
+
+Tags:
+
+#Handmade
+#Bamboo
+#IndianCraft
+#RuralArtisan
+
+Add language tabs:
+
+Hindi | English | Punjabi
+
+Show:
+
+**AI generated in seconds**
+
+Buttons:
+
+**Edit**
+
+**Continue to Smart Pricing →**
+
+The fields should be editable.
+
+---
+
+# SCREEN 7 — SMART PRICING ASSISTANT
+
+Title:
+
+**💰 Smart Pricing Assistant**
+
+Subtitle:
+
+"Know your costs. Price your craft with confidence."
+
+Inputs:
+
+Material Cost
+₹300
+
+Labour Cost
+₹400
+
+Packaging
+₹50
+
+Calculate automatically:
+
+Total Cost
+₹750
+
+Show a market range:
+
+**Estimated Market Range**
+
+₹850 — ₹1,100
+
+Show AI recommendation prominently:
+
+### Recommended Price
+
+**₹999**
+
+Explanation:
+
+"Based on your estimated costs and market positioning, ₹999 provides a reasonable selling price."
+
+Add a simple visual price range.
+
+Buttons:
+
+**Use ₹999 →**
+
+**Edit Costs**
+
+Use ₹999 → Product Preview.
+
+---
+
+# SCREEN 8 — PRODUCT PREVIEW & PUBLISH
+
+Title:
+
+**Your Product Listing**
+
+Show a professional marketplace product card.
+
+Product image
+
+**Handmade Bamboo Basket**
+
+⭐ Handwoven
+
+🌱 Bamboo
+
+📍 Haryana
+
+**₹999**
+
+Description:
+
+"Beautiful handwoven bamboo basket crafted by skilled rural artisans."
+
+Add:
+
+### Craft Story
+
+"Handcrafted using locally sourced bamboo. Each basket is carefully made by skilled artisans."
+
+Buttons:
+
+**Edit Listing**
+
+**🚀 Publish Product**
+
+When Publish is clicked:
+
+Show a polished success modal:
+
+🎉
+
+**Product Published Successfully!**
+
+"Your product is now ready to reach potential buyers."
+
+Button:
+
+**Find Potential Buyers →**
+
+Navigate to Market Linkage.
+
+---
+
+# SCREEN 9 — AI MARKET LINKAGE
+
+This is a VERY IMPORTANT screen.
+
+Title:
+
+**🎯 AI Market Linkage**
+
+Subtitle:
+
+"Potential buyers matched with your product."
+
+Explain:
+
+"ShilpSetu AI matches your products with buyer requirements."
+
+Create buyer cards.
+
+### Buyer 1
+
+🏪 Delhi Handicraft Store
+
+📍 New Delhi
+
+Interested in:
+Bamboo Products
+
+Potential Quantity:
+20 units
+
+Budget:
+₹900–₹1,100/unit
+
+AI Match:
+
+**94% Match**
+
+Button:
+
+**View Buyer →**
+
+### Buyer 2
+
+🏬 Home Décor Boutique
+
+📍 Gurugram
+
+Interested in:
+Handmade Baskets
+
+Potential Quantity:
+15 units
+
+Budget:
+₹850–₹1,050/unit
+
+AI Match:
+
+**89% Match**
+
+Button:
+
+**View Buyer →**
+
+### Buyer 3
+
+🏪 Craft & Culture Store
+
+📍 Jaipur
+
+Interested in:
+Indian Handicrafts
+
+Potential Quantity:
+30 units
+
+AI Match:
+
+**86% Match**
+
+Button:
+
+**View Buyer →**
+
+Clicking View Buyer opens Buyer Details.
+
+---
+
+# SCREEN 10 — BUYER DETAILS & SEND OFFER
+
+Title:
+
+**Buyer Details**
+
+Example:
+
+🏪 Delhi Handicraft Store
+
+📍 New Delhi
+
+### Buyer Requirement
+
+Product:
+Handmade Bamboo Basket
+
+Quantity:
+20 units
+
+Budget:
+₹900–₹1,100/unit
+
+Delivery:
+7–10 days
+
+Show:
+
+**AI Match: 94%**
+
+Buttons:
+
+**Send Offer**
+
+**Contact Buyer**
+
+When Send Offer is clicked, show form:
+
+Quantity:
+20
+
+Your Price:
+₹999
+
+Message:
+
+"I can supply 20 handmade bamboo baskets at ₹999 each."
+
+Button:
+
+**Send Offer →**
+
+After submission show:
+
+✅ **Offer Sent Successfully**
+
+"Your offer has been shared with the buyer."
+
+Button:
+
+**Back to Market Linkage**
+
+---
+
+# SCREEN 11 — ORDERS & INVENTORY
+
+Title:
+
+**📦 My Business**
+
+Create two tabs:
+
+## ORDERS
+
+Order #1024
+
+Buyer:
+Delhi Handicraft Store
+
+Product:
+Bamboo Basket
+
+Quantity:
+20
+
+Total:
+₹19,980
+
+Status:
+🟡 Processing
+
+Add status progress:
+
+Processing → Ready → Shipped → Delivered
+
+Second order:
+
+Order #1023
+
+Buyer:
+Home Décor Boutique
+
+Quantity:
+10
+
+Total:
+₹9,990
+
+Status:
+🟢 Delivered
+
+---
+
+## INVENTORY
+
+Bamboo Basket
+32 available
+
+Handmade Mat
+14 available
+
+Wood Craft
+8 available
+
+Add a low-stock warning when stock becomes low.
+
+Add button:
+
+**+ Add Inventory**
+
+Keep this simple.
+
+---
+
+# SCREEN 12 — AI BUSINESS COACH
+
+Title:
+
+**🤖 ShilpSetu AI Coach**
+
+Subtitle:
+
+"Your digital business assistant."
+
+Create a chat interface.
+
+Opening message:
+
+"Namaste Meena! 👋
+
+I can help you with pricing, products, customers, inventory and sales."
+
+Quick question buttons:
+
+💰 How should I price my product?
+
+📈 Which product should I make more?
+
+📸 How can I improve my listing?
+
+🎯 How can I get more buyers?
+
+📦 How much stock should I keep?
+
+Add:
+
+🎙️ **Ask by Voice**
+
+When user asks:
+
+"Mere products ki sales kam ho gayi hain."
+
+Show a realistic response:
+
+"Your bamboo basket listing is receiving fewer enquiries. Try improving the product photo, adding a short craft story and offering a bundle of two baskets. You can also contact the buyers matched to your product."
+
+Make the chatbot feel interactive.
+
+If no real AI API is configured, use intelligent demo responses.
+
+Structure the code so a real AI API can be connected later.
+
+---
+
+# ADDITIONAL FEATURE — CRAFT STORY
+
+Include a Craft Story section in product listings.
+
+The artisan can enter or speak:
+
+"These baskets are handmade using locally sourced bamboo. Each basket takes approximately one day to complete."
+
+AI converts it into a short professional story.
+
+Display:
+
+**Meet the Artisan**
+
+This should help buyers understand the cultural and human value behind the product.
+
+---
+
+# ADDITIONAL FEATURE — IMPACT
+
+Add an impact section to the profile/dashboard.
+
+Show:
+
+12 Products Listed
+
+27 Buyer Connections
+
+7 Orders
+
+₹18,500 Estimated Sales
+
+3 Languages Supported
+
+Message:
+
+🌱 **Your digital presence is growing.**
+
+---
+
+# NAVIGATION
+
+Create a consistent bottom navigation for logged-in screens:
+
+🏠 Home
+
+🛍️ Products
+
+🎯 Buyers
+
+📦 Orders
+
+👤 Profile
+
+All navigation buttons must actually work.
+
+Add back buttons on detail pages.
+
+---
+
+# DATA
+
+Use realistic demo data.
+
+Primary artisan:
+
+Meena Devi
+
+Sonipat, Haryana
+
+Bamboo Handicrafts
+
+8 years experience
+
+Main product:
+
+Handmade Bamboo Basket
+
+Price:
+
+₹999
+
+---
+
+# IMPORTANT FUNCTIONALITY
+
+Make these flows actually work:
+
+Landing
+→ Registration
+→ Dashboard
+
+Dashboard
+→ Add Product
+
+Add Product
+→ Photo Studio
+
+Photo Studio
+→ Catalogue
+
+Catalogue
+→ Pricing
+
+Pricing
+→ Product Preview
+
+Product Preview
+→ Publish
+
+Publish
+→ Market Linkage
+
+Market Linkage
+→ Buyer Details
+
+Buyer Details
+→ Send Offer
+
+Send Offer
+→ Success
+
+Dashboard
+→ Orders
+
+Dashboard
+→ AI Coach
+
+Bottom navigation must work.
+
+Back buttons must work.
+
+Forms must work.
+
+Buttons must not be dead.
+
+---
+
+# AI ARCHITECTURE
+
+Create clean service functions for future AI integration:
+
+* speechToText()
+* generateProductDescription()
+* translateCatalogue()
+* categorizeProduct()
+* suggestPrice()
+* matchBuyers()
+* businessCoach()
+
+If API keys are unavailable, use realistic mock responses.
+
+Never expose API keys in frontend code.
+
+---
+
+# TECHNICAL REQUIREMENTS
+
+Use the existing project's framework and structure whenever possible.
+
+Do not unnecessarily rewrite working code.
+
+Use reusable components.
+
+Use responsive layouts.
+
+Make the app work on:
+
+Mobile
+Tablet
+Desktop
+
+Keep the code organized.
+
+Avoid unnecessary dependencies.
+
+---
+
+# FINAL QUALITY CHECK
+
+Before finishing:
+
+1. Run the application.
+2. Test all 12 screens.
+3. Test every major button.
+4. Test navigation.
+5. Test forms.
+6. Check mobile responsiveness.
+7. Remove broken placeholder content.
+8. Remove lorem ipsum.
+9. Check spelling.
+10. Check ₹ currency formatting.
+11. Make sure the existing landing page still looks good.
+12. Fix any console errors.
+13. Make loading and success states polished.
+14. Make sure the complete artisan journey can be demonstrated without getting stuck.
+
+DO NOT remove existing functionality that already works.
+
+The final prototype should feel like a realistic AI-powered artisan business platform, not a collection of disconnected demo pages.
+
+The complete demo journey should be:
+
+**Artisan → Product Photo → AI Enhancement → Voice Description → AI Catalogue → Translation → Smart Pricing → Publish → AI Buyer Matching → Buyer Enquiry → Offer → Order → AI Business Coach**
+
+Build this inside the EXISTING ShilpSetu AI project.
