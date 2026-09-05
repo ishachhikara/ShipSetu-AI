@@ -1,3 +1,5 @@
+declare const fetch: (input: string, init?: any) => Promise<any>;
+declare const console: { error: (...args: any[]) => void };
 /// <reference lib="dom" />
 declare const process: { env: Record<string, string | undefined> };
 const MODEL = process.env.GEMINI_MODEL || 'gemini-2.5-flash';
