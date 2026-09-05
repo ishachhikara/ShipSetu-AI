@@ -135,7 +135,7 @@ export default async function handler(req: any, res: any) {
       if (match[2].length > 16_000_000) return json(res, 413, { error: 'Image is too large. Please choose a smaller photo.' });
       const style = String(payload.style || 'Warm daylight');
       const prompt = `Edit the provided artisan product photograph for a small Indian craft marketplace. Keep the actual product faithful to the source: do not replace it with a different product, change its shape, invent details, or remove important product features. Improve presentation only. Style: ${style}. Product: ${payload.productName || 'artisan product'}. Context: ${payload.description || ''}. Use natural realistic lighting, a clean uncluttered background, realistic shadows, and a professional e-commerce composition. Do not add text, logos, watermarks, people, or decorative objects that distract from the product.`;
-      const response = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-image:generateContent', {
+      const response = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-image:generateContent', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'x-goog-api-key': key },
         body: JSON.stringify({
