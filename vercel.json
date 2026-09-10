@@ -1,6 +1,6 @@
 {
-  "buildCommand": "pnpm run build",
-  "outputDirectory": "dist/public",
+  "buildCommand": "pnpm --dir artifacts/shilpsetu-ai run build",
+  "outputDirectory": "artifacts/shilpsetu-ai/dist/public",
   "installCommand": "pnpm install",
   "framework": "vite"
 }
