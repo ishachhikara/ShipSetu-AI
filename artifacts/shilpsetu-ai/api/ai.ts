@@ -1,6 +1,3 @@
-declare const fetch: (input: string, init?: any) => Promise<any>;
-declare const console: { error: (...args: any[]) => void };
-/// <reference lib="dom" />
 declare const process: { env: Record<string, string | undefined> };
 const MODEL = process.env.GEMINI_MODEL || 'gemini-3.6-flash';
 
@@ -29,10 +26,20 @@ function localFallback(action: string, payload: any): any {
   const name = String(payload.productName || payload.product?.name || 'your product').trim() || 'your product';
   const description = String(payload.description || '').trim();
   if (action === 'coach') return { text: `For ${name}, start with three things: keep your material and labour costs clear, use a simple product photo, and test your price with a few customers. For your next step, improve one listing and contact a few relevant buyer types. This is prototype guidance; confirm costs and local market conditions before pricing.` };
-  if (action === 'description') return { text: description || `${name} is a handmade artisan product made with care. It is designed for customers who value traditional Indian craftsmanship and thoughtful, practical design. Highlight the material, making process, size and care instructions in your final listing so buyers can make an informed choice.` };
+  if (action === 'description') { const englishFallback = description && !/[^\x00-\x7F]/.test(description) ? description : `${name} is a handmade artisan product created with care. It is suitable for customers who value traditional Indian craftsmanship and practical design. The listing can be improved further by adding material, size, making process and care details.`; return { text: englishFallback }; }
+  if (action === 'profile') {
+    const transcript = String(payload.transcript || '').trim();
+    const clean = transcript.replace(/[।,]/g, ' ');
+    const nameMatch = clean.match(/(?:my name is|i am|i'm|mera naam|मेरा नाम)\s+(.+?)(?=\s+(?:i live|i stay|from|place|craft|i make|main|मैं|mera|phone|mobile|number|experience|years)|$)/i);
+    const placeMatch = clean.match(/(?:i live in|i stay in|from|place is|मैं .*?में रहता हूं|मैं .*?में रहती हूं)\s+(.+?)(?=\s+(?:i make|craft|my craft|craft is|i have|experience|phone|mobile|number)|$)/i);
+    const craftMatch = clean.match(/(?:i make|my craft is|craft is|i create|i work in|मैं .*?बनाता हूं|मैं .*?बनाती हूं)\s+(.+?)(?=\s+(?:i have|experience|for|phone|mobile|number)|$)/i);
+    const experienceMatch = clean.match(/(?:i have|with)\s+(\d+(?:\.\d+)?)\s*(?:years?|yrs?)/i) || clean.match(/(\d+(?:\.\d+)?)\s*(?:years?|yrs?)\s*(?:of)?\s*experience/i);
+    const phoneMatch = clean.match(/(?:phone|mobile|number|contact)\s*(?:number)?\s*(?:is|:)?\s*([+\d][\d\s-]{8,})/i);
+    return { name: nameMatch?.[1]?.trim() || '', place: placeMatch?.[1]?.trim() || '', craft: craftMatch?.[1]?.trim() || '', experience: experienceMatch ? `${experienceMatch[1]} years` : '', phone: phoneMatch?.[1]?.trim() || '', text: 'Voice details captured. Please review the profile fields before creating your profile.' };
+  }
   if (action === 'translate') return { text: description || `Translation preview for ${payload.language || 'the selected language'}. Add a product description to translate it.` };
   if (action === 'categorize') return { category: 'Handicrafts' };
-  if (action === 'price') return { price: 999, reason: 'Prototype estimate only. Add your material, labour, packaging and delivery costs before setting the final price.' };
+  if (action === 'price') { const costs = payload.costs || {}; const total = Number(payload.totalCost) || (Number(costs.material) || 0) + (Number(costs.labour) || 0) + (Number(costs.packaging) || 0); const price = Math.max(total, Math.round((total * 1.35) / 10) * 10) || 999; return { price, reason: `Prototype smart-pricing estimate using your entered costs: ₹${price.toLocaleString('en-IN')}. Confirm delivery and market costs before selling.` }; }
   if (action === 'buyers') return { buyers: [
     { name: 'Local Handicraft Store', location: 'Your nearest city', interest: 'Handmade products', quantity: 10, budget: 'Discuss based on product', match: 90, initials: 'LH' },
     { name: 'Home Décor Boutique', location: 'Nearby market', interest: 'Home décor', quantity: 15, budget: 'Discuss based on product', match: 86, initials: 'HD' },
@@ -75,7 +82,7 @@ function imagePart(image: string) {
   const match = image.match(/^data:(image\/[\w.+-]+);base64,(.+)$/);
   if (!match) throw new Error('Invalid image format. Please upload the photo again.');
   if (match[2].length > 16_000_000) throw new Error('Image is too large. Please upload a smaller photo.');
-  return { inlineData: { mimeType: match[1], data: match[2] } };
+  return { inline_data: { mime_type: match[1], data: match[2] } };
 }
 
 export default async function handler(req: any, res: any) {
@@ -94,11 +101,20 @@ export default async function handler(req: any, res: any) {
       text = await generate([{ text: `${systemContext('business coaching')}\nArtisan: ${JSON.stringify(payload.artisan)}\nProduct: ${JSON.stringify(payload.product)}\nQuestion: ${payload.question}\nSelected UI language: ${payload.language || 'English'}. Answer in that language. Keep it concise, actionable and easy to understand.` }]);
       result = { text };
     } else if (action === 'description') {
-      text = await generate([{ text: `${systemContext('product listing copy')}\nProduct name: ${payload.productName || ''}\nCurrent description: ${payload.description || ''}\nWrite the description in ${payload.language || 'English'}. Create one marketplace-ready product description in 60-90 words. Mention material, handmade nature and useful qualities only when supported by the input. Return only the description.` }]);
+      text = await generate([{ text: `${systemContext('product listing copy')}\nProduct name: ${payload.productName || ''}\nCurrent description or voice transcript: ${payload.description || ''}\nThe artisan may speak or type in any supported Indian language. Understand the input language, translate the meaning internally, and ALWAYS return the final marketplace-ready description in clear, simple ENGLISH, regardless of the selected UI language. Create one 60-90 word description. Mention material, handmade nature and useful qualities only when supported by the input. Return only the English description.` }]);
       result = { text };
+    } else if (action === 'profile') {
+      text = await generate([{ text: `${systemContext('artisan profile extraction')}\nVoice transcript: ${payload.transcript || ''}\nExtract only details explicitly stated by the artisan. The speech may be in any supported Indian language or a mix of languages. Return JSON exactly in this shape: {"name":"","place":"","craft":"","experience":"","phone":""}. Keep names, places and craft names natural; experience should be like "5 years". Do not invent missing values.` }], true);
+      result = cleanJson(text);
+      result.text = 'Voice details captured. Please review the profile fields before creating your profile.';
     } else if (action === 'translate') {
-      text = await generate([{ text: `${systemContext('catalogue translation')}\nTranslate this product description into ${payload.language}. Preserve the meaning and keep it natural for an Indian artisan marketplace. Return only the translation.\n${payload.description || ''}` }]);
-      result = { text };
+      if (payload.fields) {
+        text = await generate([{ text: `${systemContext('catalogue translation')}\nTranslate every value in this JSON object into ${payload.language}. Keep product names, categories, materials, craft types and locations natural for an Indian artisan marketplace. Do not translate proper names unnecessarily. Return JSON in exactly this shape: {\"name\":\"...\",\"category\":\"...\",\"material\":\"...\",\"craftType\":\"...\",\"origin\":\"...\",\"description\":\"...\",\"story\":\"...\"}.\n${JSON.stringify(payload.fields)}` }], true);
+        result = { fields: cleanJson(text) };
+      } else {
+        text = await generate([{ text: `${systemContext('catalogue translation')}\nTranslate this product description into ${payload.language}. Preserve the meaning and keep it natural for an Indian artisan marketplace. Return only the translation.\n${payload.description || ''}` }]);
+        result = { text };
+      }
     } else if (action === 'categorize') {
       text = await generate([{ text: `${systemContext('product categorisation')}\nProduct: ${JSON.stringify(payload)}\nReturn JSON: {"category":"..."}. Choose a practical marketplace category.` }], true);
       result = cleanJson(text);
@@ -140,7 +156,7 @@ export default async function handler(req: any, res: any) {
         headers: { 'Content-Type': 'application/json', 'x-goog-api-key': key },
         body: JSON.stringify({
           contents: [{ role: 'user', parts: [
-            { inlineData: { mimeType: match[1], data: match[2] } },
+            { inline_data: { mime_type: match[1], data: match[2] } },
             { text: prompt },
           ] }],
           generationConfig: { responseModalities: ['TEXT', 'IMAGE'] },

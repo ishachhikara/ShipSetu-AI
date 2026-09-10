@@ -1,5 +1,5 @@
 declare const process: { env: Record<string, string | undefined> };
-const MODEL = process.env.GEMINI_MODEL || 'gemini-2.5-flash';
+const MODEL = process.env.GEMINI_MODEL || 'gemini-3.6-flash';
 
 function json(res: any, status: number, body: unknown) {
   res.status(status).setHeader('Content-Type', 'application/json');
@@ -29,7 +29,7 @@ function localFallback(action: string, payload: any): any {
   if (action === 'description') return { text: description || `${name} is a handmade artisan product made with care. It is designed for customers who value traditional Indian craftsmanship and thoughtful, practical design. Highlight the material, making process, size and care instructions in your final listing so buyers can make an informed choice.` };
   if (action === 'translate') return { text: description || `Translation preview for ${payload.language || 'the selected language'}. Add a product description to translate it.` };
   if (action === 'categorize') return { category: 'Handicrafts' };
-  if (action === 'price') return { price: 999, reason: 'Prototype estimate only. Add your material, labour, packaging and delivery costs before setting the final price.' };
+  if (action === 'price') { const costs = payload.costs || {}; const total = Number(payload.totalCost) || (Number(costs.material) || 0) + (Number(costs.labour) || 0) + (Number(costs.packaging) || 0); const price = Math.max(total, Math.round((total * 1.35) / 10) * 10) || 999; return { price, reason: `Prototype smart-pricing estimate using your entered costs: ₹${price.toLocaleString('en-IN')}. Confirm delivery and market costs before selling.` }; }
   if (action === 'buyers') return { buyers: [
     { name: 'Local Handicraft Store', location: 'Your nearest city', interest: 'Handmade products', quantity: 10, budget: 'Discuss based on product', match: 90, initials: 'LH' },
     { name: 'Home Décor Boutique', location: 'Nearby market', interest: 'Home décor', quantity: 15, budget: 'Discuss based on product', match: 86, initials: 'HD' },
@@ -72,7 +72,7 @@ function imagePart(image: string) {
   const match = image.match(/^data:(image\/[\w.+-]+);base64,(.+)$/);
   if (!match) throw new Error('Invalid image format. Please upload the photo again.');
   if (match[2].length > 16_000_000) throw new Error('Image is too large. Please upload a smaller photo.');
-  return { inlineData: { mimeType: match[1], data: match[2] } };
+  return { inline_data: { mime_type: match[1], data: match[2] } };
 }
 
 export default async function handler(req: any, res: any) {
@@ -94,8 +94,13 @@ export default async function handler(req: any, res: any) {
       text = await generate([{ text: `${systemContext('product listing copy')}\nProduct name: ${payload.productName || ''}\nCurrent description: ${payload.description || ''}\nWrite the description in ${payload.language || 'English'}. Create one marketplace-ready product description in 60-90 words. Mention material, handmade nature and useful qualities only when supported by the input. Return only the description.` }]);
       result = { text };
     } else if (action === 'translate') {
-      text = await generate([{ text: `${systemContext('catalogue translation')}\nTranslate this product description into ${payload.language}. Preserve the meaning and keep it natural for an Indian artisan marketplace. Return only the translation.\n${payload.description || ''}` }]);
-      result = { text };
+      if (payload.fields) {
+        text = await generate([{ text: `${systemContext('catalogue translation')}\nTranslate every value in this JSON object into ${payload.language}. Keep product names, categories, materials, craft types and locations natural for an Indian artisan marketplace. Do not translate proper names unnecessarily. Return JSON in exactly this shape: {\"name\":\"...\",\"category\":\"...\",\"material\":\"...\",\"craftType\":\"...\",\"origin\":\"...\",\"description\":\"...\",\"story\":\"...\"}.\n${JSON.stringify(payload.fields)}` }], true);
+        result = { fields: cleanJson(text) };
+      } else {
+        text = await generate([{ text: `${systemContext('catalogue translation')}\nTranslate this product description into ${payload.language}. Preserve the meaning and keep it natural for an Indian artisan marketplace. Return only the translation.\n${payload.description || ''}` }]);
+        result = { text };
+      }
     } else if (action === 'categorize') {
       text = await generate([{ text: `${systemContext('product categorisation')}\nProduct: ${JSON.stringify(payload)}\nReturn JSON: {"category":"..."}. Choose a practical marketplace category.` }], true);
       result = cleanJson(text);
@@ -132,12 +137,12 @@ export default async function handler(req: any, res: any) {
       if (match[2].length > 16_000_000) return json(res, 413, { error: 'Image is too large. Please choose a smaller photo.' });
       const style = String(payload.style || 'Warm daylight');
       const prompt = `Edit the provided artisan product photograph for a small Indian craft marketplace. Keep the actual product faithful to the source: do not replace it with a different product, change its shape, invent details, or remove important product features. Improve presentation only. Style: ${style}. Product: ${payload.productName || 'artisan product'}. Context: ${payload.description || ''}. Use natural realistic lighting, a clean uncluttered background, realistic shadows, and a professional e-commerce composition. Do not add text, logos, watermarks, people, or decorative objects that distract from the product.`;
-      const response = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-image:generateContent', {
+      const response = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-image:generateContent', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'x-goog-api-key': key },
         body: JSON.stringify({
           contents: [{ role: 'user', parts: [
-            { inlineData: { mimeType: match[1], data: match[2] } },
+            { inline_data: { mime_type: match[1], data: match[2] } },
             { text: prompt },
           ] }],
           generationConfig: { responseModalities: ['TEXT', 'IMAGE'] },

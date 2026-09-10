@@ -73,6 +73,50 @@ const UI_TEXT: Record<Language, Record<string, string>> = {
 };
 function ui(language: Language, key: string) { return UI_TEXT[language]?.[key] || UI_TEXT.English[key] || key; }
 
+const STATIC_TEXT: Record<Language, Record<string, string>> = {
+  English: {},
+  'हिन्दी': {
+    'Good morning': 'सुप्रभात', 'Good Morning': 'सुप्रभात', 'Your artisan dashboard': 'आपका कारीगर डैशबोर्ड', "Let's grow your craft business.": 'आइए आपके शिल्प व्यवसाय को बढ़ाएं।', 'Add new product': 'नया उत्पाद जोड़ें', 'Products Listed': 'सूचीबद्ध उत्पाद', 'Buyer Enquiries': 'खरीदार पूछताछ', 'Orders': 'ऑर्डर', 'Estimated Sales': 'अनुमानित बिक्री', 'Your featured craft': 'आपका प्रमुख शिल्प', 'Catalogue strength': 'कैटलॉग गुणवत्ता', 'Need help with pricing, products or customers?': 'कीमत, उत्पाद या ग्राहकों में मदद चाहिए?', 'Ask AI Coach': 'AI कोच से पूछें', 'Recent Activity': 'हाल की गतिविधि', 'View orders': 'ऑर्डर देखें', 'Your impact': 'आपका प्रभाव', 'Your digital presence is growing.': 'आपकी डिजिटल उपस्थिति बढ़ रही है।', 'Every listing makes your craft easier to find.': 'हर सूची आपके शिल्प को आसानी से खोजने योग्य बनाती है।', 'Buyer Connections': 'खरीदार संपर्क', 'Orders Received': 'प्राप्त ऑर्डर', 'Estimated Revenue': 'अनुमानित आय', 'Languages Supported': 'समर्थित भाषाएं', 'New buyer interested in your bamboo baskets': 'नए खरीदार ने आपके बांस के उत्पादों में रुचि दिखाई', 'New pricing suggestion available': 'नई मूल्य सुझाव उपलब्ध है', 'Order #1024 received': 'ऑर्डर #1024 प्राप्त हुआ', 'Today': 'आज', 'Yesterday': 'कल', 'No activity yet. Add your first product to get started.': 'अभी कोई गतिविधि नहीं। शुरुआत करने के लिए अपना पहला उत्पाद जोड़ें।', 'No product yet': 'अभी कोई उत्पाद नहीं', 'Beautifully made. Clearly priced. Ready to meet its next home.': 'खूबसूरती से बना। उचित कीमत के साथ बिक्री के लिए तैयार।', 'New Artisan': 'नया कारीगर', 'Create your craft profile': 'अपनी शिल्प प्रोफ़ाइल बनाएं', 'Demo data — kept separate': 'डेमो डेटा — अलग रखा गया है', 'New profile — data starts from 0': 'नई प्रोफ़ाइल — डेटा 0 से शुरू', 'Profile & Impact': 'प्रोफ़ाइल और प्रभाव', 'Active Artisan': 'सक्रिय कारीगर', 'Create New Profile': 'नई प्रोफ़ाइल बनाएं', 'Create my profile': 'मेरी प्रोफ़ाइल बनाएं', 'Back': 'वापस', 'Cancel': 'रद्द करें', 'Edit': 'संपादित करें', 'Product Name': 'उत्पाद का नाम', 'Description': 'विवरण', 'Category': 'श्रेणी', 'Material': 'सामग्री', 'Craft Type': 'शिल्प प्रकार', 'Origin': 'स्थान', 'Smart Pricing Assistant': 'स्मार्ट मूल्य निर्धारण सहायक', 'Know your costs. Let AI help you price your craft fairly.': 'अपनी लागत जानें। AI को अपने शिल्प की उचित कीमत तय करने दें।', 'Material Cost': 'सामग्री लागत', 'Labour Cost': 'श्रम लागत', 'Packaging': 'पैकेजिंग', 'Total Cost': 'कुल लागत', 'AI Recommended Selling Price': 'AI द्वारा सुझाई बिक्री कीमत', 'Recalculate with AI': 'AI से दोबारा गणना करें', 'AI calculating…': 'AI गणना कर रहा है…', 'Transparent pricing': 'पारदर्शी मूल्य निर्धारण', 'Continue to Smart Pricing': 'स्मार्ट मूल्य निर्धारण जारी रखें', 'Take Product Photo': 'उत्पाद की फोटो लें', 'Upload Photo': 'फोटो अपलोड करें', 'Describe by Voice': 'आवाज़ से बताएं', 'Home': 'होम', 'Products': 'उत्पाद', 'Buyers': 'खरीदार', 'Profile': 'प्रोफ़ाइल',
+  },
+  'ਪੰਜਾਬੀ': {
+    'Good morning': 'ਸਤ ਸ੍ਰੀ ਅਕਾਲ', 'Good Morning': 'ਸਤ ਸ੍ਰੀ ਅਕਾਲ', 'Your artisan dashboard': 'ਤੁਹਾਡਾ ਕਾਰੀਗਰ ਡੈਸ਼ਬੋਰਡ', "Let's grow your craft business.": 'ਆਓ ਤੁਹਾਡੇ ਹਸਤਕਲਾ ਕਾਰੋਬਾਰ ਨੂੰ ਵਧਾਈਏ।', 'Add new product': 'ਨਵਾਂ ਉਤਪਾਦ ਸ਼ਾਮਲ ਕਰੋ', 'Products Listed': 'ਸੂਚੀਬੱਧ ਉਤਪਾਦ', 'Buyer Enquiries': 'ਖਰੀਦਦਾਰ ਪੁੱਛਗਿੱਛ', 'Orders': 'ਆਰਡਰ', 'Estimated Sales': 'ਅਨੁਮਾਨਿਤ ਵਿਕਰੀ', 'Your featured craft': 'ਤੁਹਾਡੀ ਮੁੱਖ ਹਸਤਕਲਾ', 'Catalogue strength': 'ਕੈਟਾਲਾਗ ਗੁਣਵੱਤਾ', 'Need help with pricing, products or customers?': 'ਕੀਮਤ, ਉਤਪਾਦਾਂ ਜਾਂ ਗਾਹਕਾਂ ਬਾਰੇ ਮਦਦ ਚਾਹੀਦੀ ਹੈ?', 'Ask AI Coach': 'AI ਕੋਚ ਨੂੰ ਪੁੱਛੋ', 'Recent Activity': 'ਹਾਲੀਆ ਗਤੀਵਿਧੀ', 'View orders': 'ਆਰਡਰ ਵੇਖੋ', 'Your impact': 'ਤੁਹਾਡਾ ਪ੍ਰਭਾਵ', 'Your digital presence is growing.': 'ਤੁਹਾਡੀ ਡਿਜ਼ੀਟਲ ਮੌਜੂਦਗੀ ਵੱਧ ਰਹੀ ਹੈ।', 'Buyer Connections': 'ਖਰੀਦਦਾਰ ਸੰਪਰਕ', 'Orders Received': 'ਪ੍ਰਾਪਤ ਆਰਡਰ', 'Estimated Revenue': 'ਅਨੁਮਾਨਿਤ ਆਮਦਨ', 'Languages Supported': 'ਸਮਰਥਿਤ ਭਾਸ਼ਾਵਾਂ', 'Today': 'ਅੱਜ', 'Yesterday': 'ਕੱਲ੍ਹ', 'No product yet': 'ਅਜੇ ਕੋਈ ਉਤਪਾਦ ਨਹੀਂ', 'New Artisan': 'ਨਵਾਂ ਕਾਰੀਗਰ', 'Create New Profile': 'ਨਵੀਂ ਪ੍ਰੋਫ਼ਾਈਲ ਬਣਾਓ', 'Back': 'ਵਾਪਸ', 'Edit': 'ਸੋਧੋ', 'Product Name': 'ਉਤਪਾਦ ਦਾ ਨਾਮ', 'Description': 'ਵੇਰਵਾ', 'Category': 'ਸ਼੍ਰੇਣੀ', 'Material': 'ਸਮੱਗਰੀ', 'Craft Type': 'ਹਸਤਕਲਾ ਕਿਸਮ', 'Origin': 'ਮੂਲ ਸਥਾਨ', 'Smart Pricing Assistant': 'ਸਮਾਰਟ ਕੀਮਤ ਸਹਾਇਕ', 'Material Cost': 'ਸਮੱਗਰੀ ਦੀ ਲਾਗਤ', 'Labour Cost': 'ਮਜ਼ਦੂਰੀ ਦੀ ਲਾਗਤ', 'Packaging': 'ਪੈਕੇਜਿੰਗ', 'Total Cost': 'ਕੁੱਲ ਲਾਗਤ', 'AI Recommended Selling Price': 'AI ਵੱਲੋਂ ਸੁਝਾਈ ਵਿਕਰੀ ਕੀਮਤ', 'Home': 'ਹੋਮ', 'Products': 'ਉਤਪਾਦ', 'Buyers': 'ਖਰੀਦਦਾਰ', 'Profile': 'ਪ੍ਰੋਫ਼ਾਈਲ',
+  },
+  'বাংলা': {
+    'Good morning': 'সুপ্রভাত', 'Good Morning': 'সুপ্রভাত', 'Your artisan dashboard': 'আপনার কারিগর ড্যাশবোর্ড', "Let's grow your craft business.": 'চলুন আপনার কারুশিল্পের ব্যবসা বাড়াই।', 'Add new product': 'নতুন পণ্য যোগ করুন', 'Products Listed': 'তালিকাভুক্ত পণ্য', 'Buyer Enquiries': 'ক্রেতার জিজ্ঞাসা', 'Orders': 'অর্ডার', 'Estimated Sales': 'আনুমানিক বিক্রি', 'Your featured craft': 'আপনার বিশেষ কারুশিল্প', 'Catalogue strength': 'ক্যাটালগের মান', 'Need help with pricing, products or customers?': 'দাম, পণ্য বা ক্রেতা নিয়ে সাহায্য দরকার?', 'Ask AI Coach': 'AI কোচকে জিজ্ঞাসা করুন', 'Recent Activity': 'সাম্প্রতিক কার্যকলাপ', 'View orders': 'অর্ডার দেখুন', 'Your impact': 'আপনার প্রভাব', 'Your digital presence is growing.': 'আপনার ডিজিটাল উপস্থিতি বাড়ছে।', 'Buyer Connections': 'ক্রেতার সংযোগ', 'Orders Received': 'প্রাপ্ত অর্ডার', 'Estimated Revenue': 'আনুমানিক আয়', 'Languages Supported': 'সমর্থিত ভাষা', 'Today': 'আজ', 'Yesterday': 'গতকাল', 'No product yet': 'এখনও কোনো পণ্য নেই', 'New Artisan': 'নতুন কারিগর', 'Create New Profile': 'নতুন প্রোফাইল তৈরি করুন', 'Back': 'ফিরে যান', 'Edit': 'সম্পাদনা', 'Product Name': 'পণ্যের নাম', 'Description': 'বিবরণ', 'Category': 'বিভাগ', 'Material': 'উপাদান', 'Craft Type': 'কারুশিল্পের ধরন', 'Origin': 'উৎপত্তি', 'Smart Pricing Assistant': 'স্মার্ট মূল্য সহায়ক', 'Material Cost': 'উপাদানের খরচ', 'Labour Cost': 'শ্রমের খরচ', 'Packaging': 'প্যাকেজিং', 'Total Cost': 'মোট খরচ', 'AI Recommended Selling Price': 'AI প্রস্তাবিত বিক্রয়মূল্য', 'Home': 'হোম', 'Products': 'পণ্য', 'Buyers': 'ক্রেতা', 'Profile': 'প্রোফাইল',
+  },
+  'ગુજરાતી': {
+    'Good morning': 'સુપ્રભાત', 'Good Morning': 'સુપ્રભાત', 'Your artisan dashboard': 'તમારું કારીગર ડેશબોર્ડ', "Let's grow your craft business.": 'ચાલો તમારા હસ્તકલા વ્યવસાયને વધારીએ.', 'Add new product': 'નવું ઉત્પાદન ઉમેરો', 'Products Listed': 'સૂચિબદ્ધ ઉત્પાદનો', 'Buyer Enquiries': 'ખરીદદાર પૂછપરછ', 'Orders': 'ઓર્ડર', 'Estimated Sales': 'અંદાજિત વેચાણ', 'Your featured craft': 'તમારી વિશેષ હસ્તકલા', 'Catalogue strength': 'કેટલોગ ગુણવત્તા', 'Need help with pricing, products or customers?': 'કિંમત, ઉત્પાદનો અથવા ગ્રાહકો અંગે મદદ જોઈએ?', 'Ask AI Coach': 'AI કોચને પૂછો', 'Recent Activity': 'તાજેતરની પ્રવૃત્તિ', 'View orders': 'ઓર્ડર જુઓ', 'Your impact': 'તમારી અસર', 'Your digital presence is growing.': 'તમારી ડિજિટલ હાજરી વધી રહી છે.', 'Buyer Connections': 'ખરીદદાર જોડાણો', 'Orders Received': 'મળેલા ઓર્ડર', 'Estimated Revenue': 'અંદાજિત આવક', 'Languages Supported': 'સમર્થિત ભાષાઓ', 'Today': 'આજે', 'Yesterday': 'ગઈકાલે', 'No product yet': 'હજુ કોઈ ઉત્પાદન નથી', 'New Artisan': 'નવા કારીગર', 'Create New Profile': 'નવી પ્રોફાઇલ બનાવો', 'Back': 'પાછા', 'Edit': 'ફેરફાર કરો', 'Product Name': 'ઉત્પાદનનું નામ', 'Description': 'વર્ણન', 'Category': 'શ્રેણી', 'Material': 'સામગ્રી', 'Craft Type': 'હસ્તકલા પ્રકાર', 'Origin': 'મૂળ સ્થાન', 'Smart Pricing Assistant': 'સ્માર્ટ કિંમત સહાયક', 'Material Cost': 'સામગ્રી ખર્ચ', 'Labour Cost': 'મજૂરી ખર્ચ', 'Packaging': 'પેકેજિંગ', 'Total Cost': 'કુલ ખર્ચ', 'AI Recommended Selling Price': 'AI સૂચવેલી વેચાણ કિંમત', 'Home': 'હોમ', 'Products': 'ઉત્પાદનો', 'Buyers': 'ખરીદદારો', 'Profile': 'પ્રોફાઇલ',
+  },
+  'मराठी': {
+    'Good morning': 'शुभ प्रभात', 'Good Morning': 'शुभ प्रभात', 'Your artisan dashboard': 'तुमचे कारागीर डॅशबोर्ड', "Let's grow your craft business.": 'चला तुमचा हस्तकला व्यवसाय वाढवूया.', 'Add new product': 'नवीन उत्पादन जोडा', 'Products Listed': 'नोंदवलेली उत्पादने', 'Buyer Enquiries': 'खरेदीदार चौकशी', 'Orders': 'ऑर्डर', 'Estimated Sales': 'अंदाजे विक्री', 'Your featured craft': 'तुमची खास हस्तकला', 'Catalogue strength': 'कॅटलॉग गुणवत्ता', 'Need help with pricing, products or customers?': 'किंमत, उत्पादने किंवा ग्राहकांबाबत मदत हवी आहे?', 'Ask AI Coach': 'AI कोचकडे विचारा', 'Recent Activity': 'अलीकडील क्रियाकलाप', 'View orders': 'ऑर्डर पहा', 'Your impact': 'तुमचा प्रभाव', 'Your digital presence is growing.': 'तुमची डिजिटल उपस्थिती वाढत आहे.', 'Buyer Connections': 'खरेदीदार संपर्क', 'Orders Received': 'प्राप्त ऑर्डर्स', 'Estimated Revenue': 'अंदाजे उत्पन्न', 'Languages Supported': 'समर्थित भाषा', 'Today': 'आज', 'Yesterday': 'काल', 'No product yet': 'अद्याप कोणतेही उत्पादन नाही', 'New Artisan': 'नवीन कारागीर', 'Create New Profile': 'नवीन प्रोफाइल तयार करा', 'Back': 'मागे', 'Edit': 'संपादित करा', 'Product Name': 'उत्पादनाचे नाव', 'Description': 'वर्णन', 'Category': 'श्रेणी', 'Material': 'साहित्य', 'Craft Type': 'हस्तकला प्रकार', 'Origin': 'मूळ ठिकाण', 'Smart Pricing Assistant': 'स्मार्ट किंमत सहाय्यक', 'Material Cost': 'साहित्य खर्च', 'Labour Cost': 'मजुरी खर्च', 'Packaging': 'पॅकेजिंग', 'Total Cost': 'एकूण खर्च', 'AI Recommended Selling Price': 'AI सुचवलेली विक्री किंमत', 'Home': 'मुख्यपृष्ठ', 'Products': 'उत्पादने', 'Buyers': 'खरेदीदार', 'Profile': 'प्रोफाइल',
+  },
+  'தமிழ்': {
+    'Good morning': 'காலை வணக்கம்', 'Good Morning': 'காலை வணக்கம்', 'Your artisan dashboard': 'உங்கள் கைவினைஞர் டாஷ்போர்டு', "Let's grow your craft business.": 'உங்கள் கைவினைத் தொழிலை வளர்ப்போம்.', 'Add new product': 'புதிய தயாரிப்பைச் சேர்க்கவும்', 'Products Listed': 'பட்டியலிடப்பட்ட தயாரிப்புகள்', 'Buyer Enquiries': 'வாங்குபவர் விசாரணைகள்', 'Orders': 'ஆர்டர்கள்', 'Estimated Sales': 'மதிப்பிடப்பட்ட விற்பனை', 'Your featured craft': 'உங்கள் சிறப்பு கைவினை', 'Catalogue strength': 'பட்டியல் தரம்', 'Need help with pricing, products or customers?': 'விலை, தயாரிப்புகள் அல்லது வாடிக்கையாளர்கள் பற்றி உதவி வேண்டுமா?', 'Ask AI Coach': 'AI பயிற்சியாளரிடம் கேளுங்கள்', 'Recent Activity': 'சமீபத்திய செயல்பாடு', 'View orders': 'ஆர்டர்களைப் பார்க்கவும்', 'Your impact': 'உங்கள் தாக்கம்', 'Your digital presence is growing.': 'உங்கள் டிஜிட்டல் இருப்பு வளர்ந்து வருகிறது.', 'Buyer Connections': 'வாங்குபவர் இணைப்புகள்', 'Orders Received': 'பெறப்பட்ட ஆர்டர்கள்', 'Estimated Revenue': 'மதிப்பிடப்பட்ட வருவாய்', 'Languages Supported': 'ஆதரிக்கப்படும் மொழிகள்', 'Today': 'இன்று', 'Yesterday': 'நேற்று', 'No product yet': 'இன்னும் தயாரிப்பு இல்லை', 'New Artisan': 'புதிய கைவினைஞர்', 'Create New Profile': 'புதிய சுயவிவரத்தை உருவாக்கவும்', 'Back': 'பின்', 'Edit': 'திருத்து', 'Product Name': 'தயாரிப்பு பெயர்', 'Description': 'விளக்கம்', 'Category': 'வகை', 'Material': 'பொருள்', 'Craft Type': 'கைவினை வகை', 'Origin': 'தோற்றம்', 'Smart Pricing Assistant': 'ஸ்மார்ட் விலை உதவியாளர்', 'Material Cost': 'பொருள் செலவு', 'Labour Cost': 'தொழிலாளர் செலவு', 'Packaging': 'பேக்கேஜிங்', 'Total Cost': 'மொத்த செலவு', 'AI Recommended Selling Price': 'AI பரிந்துரைக்கும் விற்பனை விலை', 'Home': 'முகப்பு', 'Products': 'தயாரிப்புகள்', 'Buyers': 'வாங்குபவர்கள்', 'Profile': 'சுயவிவரம்',
+  },
+  'తెలుగు': {
+    'Good morning': 'శుభోదయం', 'Good Morning': 'శుభోదయం', 'Your artisan dashboard': 'మీ కళాకారుడి డ్యాష్‌బోర్డ్', "Let's grow your craft business.": 'మీ హస్తకళ వ్యాపారాన్ని అభివృద్ధి చేద్దాం.', 'Add new product': 'కొత్త ఉత్పత్తిని జోడించండి', 'Products Listed': 'జాబితాలోని ఉత్పత్తులు', 'Buyer Enquiries': 'కొనుగోలుదారుల విచారణలు', 'Orders': 'ఆర్డర్లు', 'Estimated Sales': 'అంచనా అమ్మకాలు', 'Your featured craft': 'మీ ప్రత్యేక హస్తకళ', 'Catalogue strength': 'కేటలాగ్ నాణ్యత', 'Need help with pricing, products or customers?': 'ధరలు, ఉత్పత్తులు లేదా కస్టమర్ల గురించి సహాయం కావాలా?', 'Ask AI Coach': 'AI కోచ్‌ను అడగండి', 'Recent Activity': 'ఇటీవలి కార్యకలాపాలు', 'View orders': 'ఆర్డర్లను చూడండి', 'Your impact': 'మీ ప్రభావం', 'Your digital presence is growing.': 'మీ డిజిటల్ ఉనికి పెరుగుతోంది.', 'Buyer Connections': 'కొనుగోలుదారుల సంబంధాలు', 'Orders Received': 'అందుకున్న ఆర్డర్లు', 'Estimated Revenue': 'అంచనా ఆదాయం', 'Languages Supported': 'మద్దతు ఉన్న భాషలు', 'Today': 'ఈరోజు', 'Yesterday': 'నిన్న', 'No product yet': 'ఇంకా ఉత్పత్తి లేదు', 'New Artisan': 'కొత్త కళాకారుడు', 'Create New Profile': 'కొత్త ప్రొఫైల్ సృష్టించండి', 'Back': 'వెనుకకు', 'Edit': 'సవరించు', 'Product Name': 'ఉత్పత్తి పేరు', 'Description': 'వివరణ', 'Category': 'వర్గం', 'Material': 'పదార్థం', 'Craft Type': 'హస్తకళ రకం', 'Origin': 'మూలం', 'Smart Pricing Assistant': 'స్మార్ట్ ధర సహాయకుడు', 'Material Cost': 'పదార్థం ఖర్చు', 'Labour Cost': 'కార్మిక ఖర్చు', 'Packaging': 'ప్యాకేజింగ్', 'Total Cost': 'మొత్తం ఖర్చు', 'AI Recommended Selling Price': 'AI సూచించిన అమ్మకపు ధర', 'Home': 'హోమ్', 'Products': 'ఉత్పత్తులు', 'Buyers': 'కొనుగోలుదారులు', 'Profile': 'ప్రొఫైల్',
+  },
+  'ಕನ್ನಡ': {
+    'Good morning': 'ಶುಭೋದಯ', 'Good Morning': 'ಶುಭೋದಯ', 'Your artisan dashboard': 'ನಿಮ್ಮ ಕರಕುಶಲಗಾರ ಡ್ಯಾಶ್‌ಬೋರ್ಡ್', "Let's grow your craft business.": 'ನಿಮ್ಮ ಕರಕುಶಲ ವ್ಯವಹಾರವನ್ನು ಬೆಳೆಸೋಣ.', 'Add new product': 'ಹೊಸ ಉತ್ಪನ್ನ ಸೇರಿಸಿ', 'Products Listed': 'ಪಟ್ಟಿಯಲ್ಲಿರುವ ಉತ್ಪನ್ನಗಳು', 'Buyer Enquiries': 'ಖರೀದಿದಾರರ ವಿಚಾರಣೆಗಳು', 'Orders': 'ಆರ್ಡರ್‌ಗಳು', 'Estimated Sales': 'ಅಂದಾಜು ಮಾರಾಟ', 'Your featured craft': 'ನಿಮ್ಮ ವಿಶೇಷ ಕರಕುಶಲ', 'Catalogue strength': 'ಕ್ಯಾಟಲಾಗ್ ಗುಣಮಟ್ಟ', 'Need help with pricing, products or customers?': 'ಬೆಲೆ, ಉತ್ಪನ್ನಗಳು ಅಥವಾ ಗ್ರಾಹಕರ ಬಗ್ಗೆ ಸಹಾಯ ಬೇಕೇ?', 'Ask AI Coach': 'AI ಕೋಚ್‌ಗೆ ಕೇಳಿ', 'Recent Activity': 'ಇತ್ತೀಚಿನ ಚಟುವಟಿಕೆ', 'View orders': 'ಆರ್ಡರ್‌ಗಳನ್ನು ನೋಡಿ', 'Your impact': 'ನಿಮ್ಮ ಪರಿಣಾಮ', 'Your digital presence is growing.': 'ನಿಮ್ಮ ಡಿಜಿಟಲ್ ಉಪಸ್ಥಿತಿ ಹೆಚ್ಚುತ್ತಿದೆ.', 'Buyer Connections': 'ಖರೀದಿದಾರ ಸಂಪರ್ಕಗಳು', 'Orders Received': 'ಸ್ವೀಕರಿಸಿದ ಆರ್ಡರ್‌ಗಳು', 'Estimated Revenue': 'ಅಂದಾಜು ಆದಾಯ', 'Languages Supported': 'ಬೆಂಬಲಿತ ಭಾಷೆಗಳು', 'Today': 'ಇಂದು', 'Yesterday': 'ನಿನ್ನೆ', 'No product yet': 'ಇನ್ನೂ ಉತ್ಪನ್ನವಿಲ್ಲ', 'New Artisan': 'ಹೊಸ ಕರಕುಶಲಗಾರ', 'Create New Profile': 'ಹೊಸ ಪ್ರೊಫೈಲ್ ರಚಿಸಿ', 'Back': 'ಹಿಂದೆ', 'Edit': 'ತಿದ್ದು', 'Product Name': 'ಉತ್ಪನ್ನದ ಹೆಸರು', 'Description': 'ವಿವರಣೆ', 'Category': 'ವರ್ಗ', 'Material': 'ವಸ್ತು', 'Craft Type': 'ಕರಕುಶಲ ಪ್ರಕಾರ', 'Origin': 'ಮೂಲ', 'Smart Pricing Assistant': 'ಸ್ಮಾರ್ಟ್ ಬೆಲೆ ಸಹಾಯಕ', 'Material Cost': 'ವಸ್ತು ವೆಚ್ಚ', 'Labour Cost': 'ಕಾರ್ಮಿಕ ವೆಚ್ಚ', 'Packaging': 'ಪ್ಯಾಕೇಜಿಂಗ್', 'Total Cost': 'ಒಟ್ಟು ವೆಚ್ಚ', 'AI Recommended Selling Price': 'AI ಶಿಫಾರಸು ಮಾಡಿದ ಮಾರಾಟ ಬೆಲೆ', 'Home': 'ಮುಖಪುಟ', 'Products': 'ಉತ್ಪನ್ನಗಳು', 'Buyers': 'ಖರೀದಿದಾರರು', 'Profile': 'ಪ್ರೊಫೈಲ್',
+  },
+  'മലയാളം': {
+    'Good morning': 'സുപ്രഭാതം', 'Good Morning': 'സുപ്രഭാതം', 'Your artisan dashboard': 'നിങ്ങളുടെ കരകൗശല ഡാഷ്ബോർഡ്', "Let's grow your craft business.": 'നിങ്ങളുടെ കരകൗശല ബിസിനസ് വളർത്താം.', 'Add new product': 'പുതിയ ഉൽപ്പന്നം ചേർക്കുക', 'Products Listed': 'പട്ടികപ്പെടുത്തിയ ഉൽപ്പന്നങ്ങൾ', 'Buyer Enquiries': 'വാങ്ങുന്നവരുടെ അന്വേഷണങ്ങൾ', 'Orders': 'ഓർഡറുകൾ', 'Estimated Sales': 'കണക്കാക്കിയ വിൽപ്പന', 'Your featured craft': 'നിങ്ങളുടെ പ്രത്യേക കരകൗശലം', 'Catalogue strength': 'കാറ്റലോഗ് നിലവാരം', 'Need help with pricing, products or customers?': 'വില, ഉൽപ്പന്നങ്ങൾ അല്ലെങ്കിൽ ഉപഭോക്താക്കളെക്കുറിച്ച് സഹായം വേണമോ?', 'Ask AI Coach': 'AI കോച്ചിനോട് ചോദിക്കുക', 'Recent Activity': 'സമീപകാല പ്രവർത്തനം', 'View orders': 'ഓർഡറുകൾ കാണുക', 'Your impact': 'നിങ്ങളുടെ സ്വാധീനം', 'Your digital presence is growing.': 'നിങ്ങളുടെ ഡിജിറ്റൽ സാന്നിധ്യം വളരുന്നു.', 'Buyer Connections': 'വാങ്ങുന്നവരുടെ ബന്ധങ്ങൾ', 'Orders Received': 'ലഭിച്ച ഓർഡറുകൾ', 'Estimated Revenue': 'കണക്കാക്കിയ വരുമാനം', 'Languages Supported': 'പിന്തുണയ്ക്കുന്ന ഭാഷകൾ', 'Today': 'ഇന്ന്', 'Yesterday': 'ഇന്നലെ', 'No product yet': 'ഇതുവരെ ഉൽപ്പന്നമില്ല', 'New Artisan': 'പുതിയ കരകൗശലക്കാരൻ', 'Create New Profile': 'പുതിയ പ്രൊഫൈൽ സൃഷ്ടിക്കുക', 'Back': 'തിരികെ', 'Edit': 'തിരുത്തുക', 'Product Name': 'ഉൽപ്പന്നത്തിന്റെ പേര്', 'Description': 'വിവരണം', 'Category': 'വിഭാഗം', 'Material': 'വസ്തു', 'Craft Type': 'കരകൗശല തരം', 'Origin': 'ഉത്ഭവം', 'Smart Pricing Assistant': 'സ്മാർട്ട് വില സഹായി', 'Material Cost': 'വസ്തു ചെലവ്', 'Labour Cost': 'തൊഴിൽ ചെലവ്', 'Packaging': 'പാക്കേജിംഗ്', 'Total Cost': 'ആകെ ചെലവ്', 'AI Recommended Selling Price': 'AI ശുപാർശ ചെയ്യുന്ന വിൽപ്പന വില', 'Home': 'ഹോം', 'Products': 'ഉൽപ്പന്നങ്ങൾ', 'Buyers': 'വാങ്ങുന്നവർ', 'Profile': 'പ്രൊഫൈൽ',
+  },
+  'ଓଡ଼ିଆ': {
+    'Good morning': 'ଶୁଭ ସକାଳ', 'Good Morning': 'ଶୁଭ ସକାଳ', 'Your artisan dashboard': 'ଆପଣଙ୍କ କାରିଗର ଡ୍ୟାସବୋର୍ଡ', "Let's grow your craft business.": 'ଆସନ୍ତୁ ଆପଣଙ୍କ ହସ୍ତଶିଳ୍ପ ବ୍ୟବସାୟକୁ ବଢ଼ାଇବା।', 'Add new product': 'ନୂଆ ଉତ୍ପାଦ ଯୋଡନ୍ତୁ', 'Products Listed': 'ତାଲିକାଭୁକ୍ତ ଉତ୍ପାଦ', 'Buyer Enquiries': 'କ୍ରେତାଙ୍କ ପଚରାଉଚରା', 'Orders': 'ଅର୍ଡର', 'Estimated Sales': 'ଆନୁମାନିକ ବିକ୍ରି', 'Your featured craft': 'ଆପଣଙ୍କ ବିଶେଷ ହସ୍ତଶିଳ୍ପ', 'Catalogue strength': 'କ୍ୟାଟାଲଗ୍ ଗୁଣବତ୍ତା', 'Need help with pricing, products or customers?': 'ମୂଲ୍ୟ, ଉତ୍ପାଦ କିମ୍ବା ଗ୍ରାହକ ବିଷୟରେ ସାହାଯ୍ୟ ଦରକାର କି?', 'Ask AI Coach': 'AI କୋଚ୍‌ଙ୍କୁ ପଚାରନ୍ତୁ', 'Recent Activity': 'ସାମ୍ପ୍ରତିକ କାର୍ଯ୍ୟକଳାପ', 'View orders': 'ଅର୍ଡର ଦେଖନ୍ତୁ', 'Your impact': 'ଆପଣଙ୍କ ପ୍ରଭାବ', 'Your digital presence is growing.': 'ଆପଣଙ୍କ ଡିଜିଟାଲ୍ ଉପସ୍ଥିତି ବଢ଼ୁଛି।', 'Buyer Connections': 'କ୍ରେତା ସଂଯୋଗ', 'Orders Received': 'ପ୍ରାପ୍ତ ଅର୍ଡର', 'Estimated Revenue': 'ଆନୁମାନିକ ଆୟ', 'Languages Supported': 'ସମର୍ଥିତ ଭାଷା', 'Today': 'ଆଜି', 'Yesterday': 'ଗତକାଲି', 'No product yet': 'ଏପର୍ଯ୍ୟନ୍ତ କୌଣସି ଉତ୍ପାଦ ନାହିଁ', 'New Artisan': 'ନୂଆ କାରିଗର', 'Create New Profile': 'ନୂଆ ପ୍ରୋଫାଇଲ୍ ସୃଷ୍ଟି କରନ୍ତୁ', 'Back': 'ପଛକୁ', 'Edit': 'ସମ୍ପାଦନା', 'Product Name': 'ଉତ୍ପାଦର ନାମ', 'Description': 'ବର୍ଣ୍ଣନା', 'Category': 'ଶ୍ରେଣୀ', 'Material': 'ସାମଗ୍ରୀ', 'Craft Type': 'ହସ୍ତଶିଳ୍ପ ପ୍ରକାର', 'Origin': 'ମୂଳ ସ୍ଥାନ', 'Smart Pricing Assistant': 'ସ୍ମାର୍ଟ ମୂଲ୍ୟ ସହାୟକ', 'Material Cost': 'ସାମଗ୍ରୀ ଖର୍ଚ୍ଚ', 'Labour Cost': 'ଶ୍ରମ ଖର୍ଚ୍ଚ', 'Packaging': 'ପ୍ୟାକେଜିଂ', 'Total Cost': 'ମୋଟ ଖର୍ଚ୍ଚ', 'AI Recommended Selling Price': 'AI ପ୍ରସ୍ତାବିତ ବିକ୍ରୟ ମୂଲ୍ୟ', 'Home': 'ହୋମ୍', 'Products': 'ଉତ୍ପାଦ', 'Buyers': 'କ୍ରେତା', 'Profile': 'ପ୍ରୋଫାଇଲ୍',
+  },
+  'অসমীয়া': {
+    'Good morning': 'সুপ্ৰভাত', 'Good Morning': 'সুপ্ৰভাত', 'Your artisan dashboard': 'আপোনাৰ কাৰিকৰ ডেশ্বব’ৰ্ড', "Let's grow your craft business.": 'আহক আপোনাৰ হস্তশিল্প ব্যৱসায় বৃদ্ধি কৰোঁ।', 'Add new product': 'নতুন সামগ্ৰী যোগ কৰক', 'Products Listed': 'তালিকাভুক্ত সামগ্ৰী', 'Buyer Enquiries': 'ক্ৰেতাৰ অনুসন্ধান', 'Orders': 'অৰ্ডাৰ', 'Estimated Sales': 'আনুমানিক বিক্ৰী', 'Your featured craft': 'আপোনাৰ বিশেষ হস্তশিল্প', 'Catalogue strength': 'কেটেলগৰ মান', 'Need help with pricing, products or customers?': 'মূল্য, সামগ্ৰী বা গ্ৰাহকৰ বিষয়ে সহায় লাগে নেকি?', 'Ask AI Coach': 'AI কোচক সোধক', 'Recent Activity': 'শেহতীয়া কাৰ্যকলাপ', 'View orders': 'অৰ্ডাৰ চাওক', 'Your impact': 'আপোনাৰ প্ৰভাৱ', 'Your digital presence is growing.': 'আপোনাৰ ডিজিটেল উপস্থিতি বৃদ্ধি পাইছে।', 'Buyer Connections': 'ক্ৰেতা সংযোগ', 'Orders Received': 'পোৱা অৰ্ডাৰ', 'Estimated Revenue': 'আনুমানিক আয়', 'Languages Supported': 'সমৰ্থিত ভাষা', 'Today': 'আজি', 'Yesterday': 'কালি', 'No product yet': 'এতিয়ালৈ কোনো সামগ্ৰী নাই', 'New Artisan': 'নতুন কাৰিকৰ', 'Create New Profile': 'নতুন প্ৰ’ফাইল বনাওক', 'Back': 'পিছলৈ', 'Edit': 'সম্পাদনা', 'Product Name': 'সামগ্ৰীৰ নাম', 'Description': 'বিৱৰণ', 'Category': 'শ্ৰেণী', 'Material': 'সামগ্ৰী', 'Craft Type': 'হস্তশিল্পৰ ধৰণ', 'Origin': 'উৎপত্তি', 'Smart Pricing Assistant': 'স্মাৰ্ট মূল্য সহায়ক', 'Material Cost': 'সামগ্ৰীৰ খৰচ', 'Labour Cost': 'শ্ৰমৰ খৰচ', 'Packaging': 'পেকেজিং', 'Total Cost': 'মুঠ খৰচ', 'AI Recommended Selling Price': 'AI পৰামৰ্শ দিয়া বিক্ৰী মূল্য', 'Home': 'হোম', 'Products': 'সামগ্ৰী', 'Buyers': 'ক্ৰেতা', 'Profile': 'প্ৰ’ফাইল',
+  },
+  'اردو': {
+    'Good morning': 'صبح بخیر', 'Good Morning': 'صبح بخیر', 'Your artisan dashboard': 'آپ کا کاریگر ڈیش بورڈ', "Let's grow your craft business.": 'آئیے آپ کے دستکاری کے کاروبار کو بڑھائیں۔', 'Add new product': 'نئی مصنوعات شامل کریں', 'Products Listed': 'درج شدہ مصنوعات', 'Buyer Enquiries': 'خریدار کی پوچھ گچھ', 'Orders': 'آرڈرز', 'Estimated Sales': 'متوقع فروخت', 'Your featured craft': 'آپ کی نمایاں دستکاری', 'Catalogue strength': 'کیٹلاگ کا معیار', 'Need help with pricing, products or customers?': 'قیمت، مصنوعات یا گاہکوں کے بارے میں مدد چاہیے؟', 'Ask AI Coach': 'AI کوچ سے پوچھیں', 'Recent Activity': 'حالیہ سرگرمی', 'View orders': 'آرڈرز دیکھیں', 'Your impact': 'آپ کا اثر', 'Your digital presence is growing.': 'آپ کی ڈیجیٹل موجودگی بڑھ رہی ہے۔', 'Buyer Connections': 'خریدار رابطے', 'Orders Received': 'موصولہ آرڈرز', 'Estimated Revenue': 'متوقع آمدنی', 'Languages Supported': 'معاون زبانیں', 'Today': 'آج', 'Yesterday': 'کل', 'No product yet': 'ابھی کوئی مصنوعات نہیں', 'New Artisan': 'نیا کاریگر', 'Create New Profile': 'نیا پروفائل بنائیں', 'Back': 'واپس', 'Edit': 'ترمیم کریں', 'Product Name': 'مصنوعات کا نام', 'Description': 'تفصیل', 'Category': 'زمرہ', 'Material': 'مواد', 'Craft Type': 'دستکاری کی قسم', 'Origin': 'اصل مقام', 'Smart Pricing Assistant': 'سمارٹ قیمت معاون', 'Material Cost': 'مواد کی لاگت', 'Labour Cost': 'مزدوری کی لاگت', 'Packaging': 'پیکیجنگ', 'Total Cost': 'کل لاگت', 'AI Recommended Selling Price': 'AI کی تجویز کردہ فروخت قیمت', 'Home': 'ہوم', 'Products': 'مصنوعات', 'Buyers': 'خریدار', 'Profile': 'پروفائل',
+  },
+};
+
+function localizeStaticText(text: string, language: Language): string {
+  return STATIC_TEXT[language]?.[text] || UI_TEXT[language]?.[text] || text;
+}
+
 type OrderStatus = 'Processing' | 'Ready' | 'Shipped' | 'Delivered';
 
 type Product = {
@@ -105,6 +149,11 @@ const EMPTY_ARTISAN: Artisan = {
   phone: '',
 };
 
+const EMPTY_PRODUCT: Product = {
+  name: '', price: 0, stock: 0, description: '', category: '', material: '',
+  craftType: '', origin: '', tags: [], story: '', published: false,
+};
+
 const DEMO_ARTISAN: Artisan = {
   name: 'Meena Devi',
   place: 'Sonipat, Haryana',
@@ -113,36 +162,26 @@ const DEMO_ARTISAN: Artisan = {
   phone: '+91 98765 43210',
 };
 
-const EMPTY_PRODUCT: Product = {
-  name: '', price: 0, stock: 0, description: '', category: '', material: '',
-  craftType: '', origin: '', tags: [], story: '', published: false,
-};
-
 const DEMO_PRODUCT: Product = {
   name: 'Handmade Bamboo Basket', price: 999, stock: 32,
   description: 'Beautiful handwoven bamboo basket crafted by skilled rural artisans. Lightweight, durable and suitable for home décor and storage.',
   category: 'Home Décor', material: 'Bamboo', craftType: 'Handwoven', origin: 'Haryana',
   tags: ['#Handmade', '#Bamboo', '#IndianCraft', '#RuralArtisan'],
-  story: 'Handcrafted using locally sourced bamboo. Each basket is carefully made by skilled artisans.',
-  published: false,
+  story: 'Handcrafted using locally sourced bamboo. Each basket is carefully made by skilled artisans.', published: false,
 };
-
-const EMPTY_BUYER: Buyer = { name: '', location: '', interest: '', quantity: 0, budget: '', match: 0, initials: '' };
 
 const DEMO_ORDERS: Order[] = [
   { id: '#1024', buyer: 'Delhi Handicraft Store', product: 'Bamboo Basket', quantity: 20, total: 19980, status: 'Processing' },
   { id: '#1023', buyer: 'Home Décor Boutique', product: 'Bamboo Basket', quantity: 10, total: 9990, status: 'Delivered' },
 ];
-
 const DEMO_INVENTORY: InventoryItem[] = [
   { name: 'Bamboo Basket', available: 32 },
   { name: 'Handmade Mat', available: 14 },
   { name: 'Wood Craft', available: 8 },
 ];
-
 const DEMO_BUYER: Buyer = {
-  name: 'Delhi Handicraft Store', location: 'New Delhi', interest: 'Bamboo Products',
-  quantity: 20, budget: '₹900–₹1,100 per unit', match: 94, initials: 'DH',
+  name: 'Delhi Handicraft Store', location: 'New Delhi', interest: 'Bamboo Products', quantity: 20,
+  budget: '₹900–₹1,100 per unit', match: 94, initials: 'DH',
 };
 
 type Order = {
@@ -169,7 +208,12 @@ type Buyer = {
   initials: string;
 };
 
+type WorkspaceMode = 'demo' | 'profile';
+
 type AppState = {
+  workspaceMode: WorkspaceMode;
+  openDemo: () => void;
+  startNewProfile: (artisan?: Artisan) => void;
   language: Language;
   setLanguage: (language: Language) => void;
   artisan: Artisan;
@@ -190,7 +234,6 @@ type AppState = {
   setInventory: React.Dispatch<React.SetStateAction<InventoryItem[]>>;
   selectedBuyer: Buyer;
   setSelectedBuyer: (buyer: Buyer) => void;
-  resetWorkspace: (mode: 'blank' | 'demo') => void;
 };
 
 const queryClient = new QueryClient();
@@ -203,56 +246,73 @@ function useApp() {
 }
 
 function AppProvider({ children }: { children: ReactNode }) {
+  const [workspaceMode, setWorkspaceMode] = useState<WorkspaceMode>(() => {
+    try { return localStorage.getItem('shilpsetu-workspace-mode') === 'profile' ? 'profile' : 'demo'; } catch { return 'demo'; }
+  });
   const [language, setLanguage] = useState<Language>(() => {
     try {
       const saved = localStorage.getItem('shilpsetu-language');
       return ['English','हिन्दी','ਪੰਜਾਬੀ','বাংলা','ગુજરાતી','मराठी','தமிழ்','తెలుగు','ಕನ್ನಡ','മലയാളം','ଓଡ଼ିଆ','অসমীয়া','اردو'].includes(saved || '') ? saved as Language : 'English';
-    } catch {
-      return 'English';
-    }
+    } catch { return 'English'; }
   });
-  const [artisan, setArtisan] = useState<Artisan>(EMPTY_ARTISAN);
-  const [product, setProduct] = useState<Product>(EMPTY_PRODUCT);
+  const profileArtisan = (() => { try { return JSON.parse(localStorage.getItem('shilpsetu-profile-artisan') || 'null'); } catch { return null; } })();
+  const [artisan, setArtisan] = useState<Artisan>(() => workspaceMode === 'profile' && profileArtisan ? { ...EMPTY_ARTISAN, ...profileArtisan } : DEMO_ARTISAN);
+  const [product, setProduct] = useState<Product>(() => {
+    try { return workspaceMode === 'profile' ? { ...EMPTY_PRODUCT, ...JSON.parse(localStorage.getItem('shilpsetu-profile-product') || '{}') } : DEMO_PRODUCT; } catch { return workspaceMode === 'profile' ? EMPTY_PRODUCT : DEMO_PRODUCT; }
+  });
   const [photoReady, setPhotoReady] = useState(false);
   const [photoDataUrl, setPhotoDataUrl] = useState('');
   const [photoAnalysis, setPhotoAnalysis] = useState('');
   const [editedPhotoDataUrl, setEditedPhotoDataUrl] = useState('');
-  const [orders, setOrders] = useState<Order[]>([]);
-  const [inventory, setInventory] = useState<InventoryItem[]>([]);
-  const [selectedBuyer, setSelectedBuyer] = useState<Buyer>(EMPTY_BUYER);
+  const [orders, setOrders] = useState<Order[]>(() => {
+    try { return workspaceMode === 'profile' ? JSON.parse(localStorage.getItem('shilpsetu-profile-orders') || '[]') : DEMO_ORDERS; } catch { return workspaceMode === 'profile' ? [] : DEMO_ORDERS; }
+  });
+  const [inventory, setInventory] = useState<InventoryItem[]>(() => {
+    try { return workspaceMode === 'profile' ? JSON.parse(localStorage.getItem('shilpsetu-profile-inventory') || '[]') : DEMO_INVENTORY; } catch { return workspaceMode === 'profile' ? [] : DEMO_INVENTORY; }
+  });
+  const [selectedBuyer, setSelectedBuyer] = useState<Buyer>(() => {
+    try { return workspaceMode === 'profile' ? JSON.parse(localStorage.getItem('shilpsetu-profile-buyer') || 'null') || { name: '', location: '', interest: '', quantity: 0, budget: '', match: 0, initials: '' } : DEMO_BUYER; } catch { return workspaceMode === 'profile' ? { name: '', location: '', interest: '', quantity: 0, budget: '', match: 0, initials: '' } : DEMO_BUYER; }
+  });
 
-  const resetWorkspace = (mode: 'blank' | 'demo') => {
-    const demo = mode === 'demo';
-    setArtisan(demo ? DEMO_ARTISAN : EMPTY_ARTISAN);
-    try {
-      if (demo) localStorage.setItem('shilpsetu-artisan', JSON.stringify(DEMO_ARTISAN));
-      else localStorage.removeItem('shilpsetu-artisan');
-    } catch {}
-    setProduct(demo ? DEMO_PRODUCT : EMPTY_PRODUCT);
+  const resetWorkspace = (mode: WorkspaceMode, nextArtisan: Artisan) => {
+    setWorkspaceMode(mode);
+    setArtisan(nextArtisan);
+    setProduct(mode === 'demo' ? DEMO_PRODUCT : EMPTY_PRODUCT);
     setPhotoReady(false);
     setPhotoDataUrl('');
     setPhotoAnalysis('');
     setEditedPhotoDataUrl('');
-    setOrders(demo ? DEMO_ORDERS : []);
-    setInventory(demo ? DEMO_INVENTORY : []);
-    setSelectedBuyer(demo ? DEMO_BUYER : EMPTY_BUYER);
+    setOrders(mode === 'demo' ? DEMO_ORDERS : []);
+    setInventory(mode === 'demo' ? DEMO_INVENTORY : []);
+    setSelectedBuyer(mode === 'demo' ? DEMO_BUYER : { name: '', location: '', interest: '', quantity: 0, budget: '', match: 0, initials: '' });
   };
+  const openDemo = () => resetWorkspace('demo', DEMO_ARTISAN);
+  const startNewProfile = (nextArtisan = EMPTY_ARTISAN) => resetWorkspace('profile', nextArtisan);
+
   useEffect(() => {
     try {
-      localStorage.setItem('shilpsetu-artisan', JSON.stringify(artisan));
+      localStorage.setItem('shilpsetu-workspace-mode', workspaceMode);
       localStorage.setItem('shilpsetu-language', language);
+      if (workspaceMode === 'profile') {
+        localStorage.setItem('shilpsetu-profile-artisan', JSON.stringify(artisan));
+        localStorage.setItem('shilpsetu-profile-product', JSON.stringify(product));
+        localStorage.setItem('shilpsetu-profile-orders', JSON.stringify(orders));
+        localStorage.setItem('shilpsetu-profile-inventory', JSON.stringify(inventory));
+        localStorage.setItem('shilpsetu-profile-buyer', JSON.stringify(selectedBuyer));
+      }
     } catch {}
-  }, [artisan, language]);
+  }, [workspaceMode, language, artisan, product, orders, inventory, selectedBuyer]);
 
   const value = useMemo(() => ({
+    workspaceMode, openDemo, startNewProfile,
     language, setLanguage, artisan, setArtisan, product, setProduct, photoReady, setPhotoReady, photoDataUrl, setPhotoDataUrl, photoAnalysis, setPhotoAnalysis, editedPhotoDataUrl, setEditedPhotoDataUrl,
-    orders, setOrders, inventory, setInventory, selectedBuyer, setSelectedBuyer, resetWorkspace,
-  }), [language, artisan, product, photoReady, photoDataUrl, photoAnalysis, editedPhotoDataUrl, orders, inventory, selectedBuyer]);
+    orders, setOrders, inventory, setInventory, selectedBuyer, setSelectedBuyer,
+  }), [workspaceMode, language, artisan, product, photoReady, photoDataUrl, photoAnalysis, editedPhotoDataUrl, orders, inventory, selectedBuyer]);
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 }
 
 // Real AI service layer. Secrets stay server-side; the browser only calls /api/ai.
-type AIAction = 'coach' | 'description' | 'translate' | 'categorize' | 'price' | 'buyers' | 'photo-analysis' | 'photo-edit' | 'voice';
+type AIAction = 'coach' | 'description' | 'translate' | 'categorize' | 'price' | 'buyers' | 'photo-analysis' | 'photo-edit' | 'voice' | 'profile';
 
 async function callAI(action: AIAction, payload: Record<string, unknown>) {
   const response = await fetch('/api/ai', {
@@ -317,41 +377,39 @@ function voiceErrorMessage(error: string): string {
 export async function speechToText(language: Language = 'English'): Promise<string> {
   const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
   if (SpeechRecognition) {
-    return new Promise((resolve, reject) => {
+    return new Promise<string>((resolve, reject) => {
       const recognition = new SpeechRecognition();
       recognition.lang = languageToSpeechLocale(language);
       recognition.interimResults = false;
       recognition.continuous = false;
-      recognition.maxAlternatives = 1;
-      let finished = false;
-      const timer = window.setTimeout(() => {
-        if (!finished) recognition.stop();
-      }, 8000);
+      recognition.maxAlternatives = 3;
+      let settled = false;
+      const timer = window.setTimeout(() => { if (!settled) recognition.stop(); }, 15000);
+      const finish = (fn: (value: any) => void, value: any) => {
+        if (settled) return;
+        settled = true;
+        window.clearTimeout(timer);
+        fn(value);
+      };
       recognition.onresult = (event: any) => {
-        const text = Array.from(event.results || [])
-          .map((result: any) => result?.[0]?.transcript || '')
-          .join(' ')
-          .trim();
-        if (text) { finished = true; window.clearTimeout(timer); resolve(text); }
+        const text = Array.from(event.results || []).map((result: any) => result?.[0]?.transcript || '').join(' ').trim();
+        if (text) finish(resolve, text); else finish(reject, new Error('no-speech'));
       };
-      recognition.onerror = (event: any) => {
-        window.clearTimeout(timer);
-        if (event?.error === 'not-allowed') reject(new Error(voiceErrorMessage('not-allowed')));
-        else if (event?.error === 'no-speech') reject(new Error(voiceErrorMessage('no-speech')));
-        else reject(new Error(`Voice capture failed (${event?.error || 'unknown'}). Please try again.`));
-      };
-      recognition.onend = () => {
-        window.clearTimeout(timer);
-        if (!finished) reject(new Error(voiceErrorMessage('no-speech')));
-      };
-      try { recognition.start(); }
-      catch { window.clearTimeout(timer); reject(new Error('Could not start voice capture. Please try again.')); }
+      recognition.onerror = (event: any) => finish(reject, new Error(event?.error || 'voice-error'));
+      recognition.onend = () => { if (!settled) finish(reject, new Error('no-speech')); };
+      try { recognition.start(); } catch { finish(reject, new Error('start-failed')); }
+    }).catch(async (error) => {
+      // Only use the recording + Gemini fallback when browser recognition is unavailable.
+      const code = error instanceof Error ? error.message : 'voice-error';
+      if (['not-supported', 'start-failed'].includes(code)) return recordVoiceWithAI(language);
+      throw new Error(voiceErrorMessage(code));
     });
   }
+  return recordVoiceWithAI(language);
+}
 
-  if (!navigator.mediaDevices?.getUserMedia || typeof MediaRecorder === 'undefined') {
-    throw new Error(voiceErrorMessage('not-supported'));
-  }
+async function recordVoiceWithAI(language: Language): Promise<string> {
+  if (!navigator.mediaDevices?.getUserMedia || typeof MediaRecorder === 'undefined') throw new Error(voiceErrorMessage('not-supported'));
   let stream: MediaStream;
   try {
     stream = await navigator.mediaDevices.getUserMedia({ audio: true });
@@ -389,9 +447,17 @@ export async function generateProductDescription(context: Record<string, unknown
   const data = await callAI('description', context);
   return data.text || '';
 }
+export async function generateProfileFromVoice(transcript: string, language: Language = 'English'): Promise<Artisan> {
+  const data = await callAI('profile', { transcript, language });
+  return { ...EMPTY_ARTISAN, name: String(data.name || ''), place: String(data.place || ''), craft: String(data.craft || ''), experience: String(data.experience || ''), phone: String(data.phone || '') };
+}
 export async function translateCatalogue(language: Language, context: Record<string, unknown> = {}): Promise<string> {
   const data = await callAI('translate', { language, ...context });
   return data.text || '';
+}
+export async function translateCatalogueFields(language: Language, fields: Record<string, string>): Promise<Record<string, string>> {
+  const data = await callAI('translate', { language, fields });
+  return data.fields || {};
 }
 export async function categorizeProduct(context: Record<string, unknown> = {}): Promise<string> {
   const data = await callAI('categorize', context);
@@ -427,42 +493,54 @@ function BasketArt({ small = false }: { small?: boolean }) {
 
 function WelcomePage() {
   const [, setLocation] = useLocation();
-  const { language, setLanguage, resetWorkspace } = useApp();
+  const { language, setLanguage, openDemo, startNewProfile } = useApp();
   return <main className="welcome noise"><section className="welcome-panel animate-rise">
     <div className="welcome-story"><Logo light /><div className="story-copy"><div className="eyebrow" style={{ color: '#f1d797' }}>Your craft. Your next chapter.</div><h1 className="display">Make your hands<br />count online.</h1><p>AI-powered tools that help artisans create, price and sell their products.</p><div className="feature-grid"><span><Camera size={14} /> Create better listings</span><span><IndianRupee size={14} /> Price smarter</span><span><Store size={14} /> Find buyers</span></div></div><div className="story-footer"><strong>01 / 04</strong><span>Built for India's makers</span></div></div>
-    <div className="welcome-form"><div className="eyebrow">A warm start</div><h2 className="display">Namaste, artisan.</h2><p>Choose a language to begin. We will keep every step short, visual and in your control.</p><div className="language-grid">{LANGUAGES.map((item) => <button key={item.value} type="button" className={`language-button ${language === item.value ? 'selected' : ''}`} onClick={() => setLanguage(item.value)} data-testid={`button-language-${item.value}`}><strong>{item.native}</strong><span>{item.label}</span></button>)}</div><button type="button" className="primary-button full-button" onClick={() => setLocation('/register')} data-testid="button-begin">{ui(language, 'start')} <ArrowRight size={16} /></button><button type="button" className="secondary-button full-button demo-button" onClick={() => { resetWorkspace('demo'); window.location.href = '/dashboard'; }} data-testid="button-explore-demo">{ui(language, 'demo')}</button><p className="form-note">No bank details needed. This demo keeps your choices on this device.</p></div>
+    <div className="welcome-form"><div className="eyebrow">A warm start</div><h2 className="display">Namaste, artisan.</h2><p>Choose a language to begin. We will keep every step short, visual and in your control.</p><div className="language-grid">{LANGUAGES.map((item) => <button key={item.value} type="button" className={`language-button ${language === item.value ? 'selected' : ''}`} onClick={() => setLanguage(item.value)} data-testid={`button-language-${item.value}`}><strong>{item.native}</strong><span>{item.label}</span></button>)}</div><button type="button" className="primary-button full-button" onClick={() => { startNewProfile(); setLocation('/register?new=1'); }} data-testid="button-begin">{ui(language, 'start')} <ArrowRight size={16} /></button><button type="button" className="secondary-button full-button demo-button" onClick={() => { openDemo(); setLocation('/dashboard'); }} data-testid="button-explore-demo">{ui(language, 'demo')}</button><p className="form-note">No bank details needed. This demo keeps your choices on this device.</p></div>
   </section></main>;
 }
 
 function RegistrationPage() {
   const [location, setLocation] = useLocation();
-  const { artisan, setArtisan, language, resetWorkspace } = useApp();
-  const isNewProfile = new URLSearchParams(location.split('?')[1] || '').get('new') === '1';
+  const { artisan, language, startNewProfile } = useApp();
+  const isNewProfile = location.includes('?new=1');
   const [form, setForm] = useState<Artisan>(() => isNewProfile ? EMPTY_ARTISAN : artisan);
   const [error, setError] = useState('');
-
-  useEffect(() => {
-    setForm(isNewProfile ? EMPTY_ARTISAN : artisan);
-    setError('');
-  }, [isNewProfile, artisan]);
+  const [voiceWorking, setVoiceWorking] = useState(false);
+  const [voiceNotice, setVoiceNotice] = useState('');
   const update = (key: keyof Artisan, value: string) => {
     setForm((current) => ({ ...current, [key]: value }));
     setError('');
   };
+  const fillProfileByVoice = async () => {
+    setError('');
+    setVoiceNotice('');
+    setVoiceWorking(true);
+    try {
+      const transcript = await speechToText(language);
+      const details = await generateProfileFromVoice(transcript, language);
+      setForm((current) => ({ ...current, ...details }));
+      setVoiceNotice('AI filled the profile from your voice. Please review the details before creating it.');
+    } catch (error) {
+      setError(error instanceof Error ? error.message : 'Voice profile assistance failed. Please try again.');
+    } finally {
+      setVoiceWorking(false);
+    }
+  };
+
   const submit = (event: FormEvent) => {
     event.preventDefault();
-    const cleaned = Object.fromEntries(Object.entries(form).map(([k,v]) => [k, v.trim()])) as Artisan;
+    const cleaned = Object.fromEntries(Object.entries(form).map(([k, v]) => [k, String(v).trim()])) as Artisan;
     if (!cleaned.name || !cleaned.place || !cleaned.craft || !cleaned.experience || !cleaned.phone) {
       setError('Please fill in every field so we can create your artisan profile.');
       return;
     }
-    resetWorkspace('blank');
-    setArtisan(cleaned);
+    startNewProfile(cleaned);
     setLocation('/dashboard');
   };
   return <main className="welcome noise"><section className="welcome-panel animate-rise">
     <div className="welcome-story"><Logo light /><div className="story-copy"><div className="eyebrow" style={{ color: '#f1d797' }}>{isNewProfile ? 'Create a new workspace' : 'Step 02 / 04'}</div><h1 className="display">Let us put<br />a name to it.</h1><p>Your name and craft help your catalogue sound like you, not a template.</p></div><div className="story-footer"><strong>{language}</strong><span>Saved privately on this device</span></div></div>
-    <form className="welcome-form" onSubmit={submit}><button type="button" className="icon-button" onClick={() => setLocation('/')} aria-label="Back"><ArrowLeft size={18} /></button><div className="eyebrow" style={{ marginTop: '1.5rem' }}>Your maker profile</div><h2 className="display">Create your artisan profile.</h2><div className="form-stack"><div className="field-group"><label htmlFor="artisan-name">Name</label><input id="artisan-name" className="field-input" value={form.name} onChange={(e) => update('name', e.target.value)} placeholder="e.g. Sunita Kumari" /></div><div className="field-group"><label htmlFor="artisan-place">Village / City</label><input id="artisan-place" className="field-input" value={form.place} onChange={(e) => update('place', e.target.value)} placeholder="e.g. Sonipat, Haryana" /></div><div className="form-inline"><div className="field-group"><label htmlFor="artisan-craft">Craft Type</label><input id="artisan-craft" className="field-input" value={form.craft} onChange={(e) => update('craft', e.target.value)} placeholder="e.g. Pottery" /></div><div className="field-group"><label htmlFor="artisan-experience">Experience</label><input id="artisan-experience" className="field-input" value={form.experience} onChange={(e) => update('experience', e.target.value)} placeholder="e.g. 5 years" /></div></div><div className="field-group"><label htmlFor="artisan-phone">Phone Number</label><input id="artisan-phone" className="field-input" type="tel" value={form.phone} onChange={(e) => update('phone', e.target.value)} placeholder="+91 98765 43210" /></div></div>{error && <div className="error-message" role="alert">{error}</div>}<button type="submit" className="primary-button full-button">Create my profile <ArrowRight size={16} /></button></form>
+    <form className="welcome-form" onSubmit={submit}><button type="button" className="icon-button" onClick={() => setLocation('/')} aria-label="Back"><ArrowLeft size={18} /></button><div className="eyebrow" style={{ marginTop: '1.5rem' }}>Your maker profile</div><h2 className="display">Create your artisan profile.</h2><p>Enter your own details. Meena Devi is only the demo profile.</p><button type="button" className="secondary-button full-button" onClick={() => void fillProfileByVoice()} disabled={voiceWorking}><Mic size={16} /> {voiceWorking ? 'Listening and creating profile…' : 'Create profile by voice with AI'}</button>{voiceNotice && <p className="success-inline"><CircleCheck size={14} />{voiceNotice}</p>}<div className="form-stack"><div className="field-group"><label htmlFor="artisan-name">Name</label><input id="artisan-name" className="field-input" value={form.name} onChange={(e) => update('name', e.target.value)} placeholder="e.g. Sunita Kumari" /></div><div className="field-group"><label htmlFor="artisan-place">Village / City</label><input id="artisan-place" className="field-input" value={form.place} onChange={(e) => update('place', e.target.value)} placeholder="e.g. Sonipat, Haryana" /></div><div className="form-inline"><div className="field-group"><label htmlFor="artisan-craft">Craft Type</label><input id="artisan-craft" className="field-input" value={form.craft} onChange={(e) => update('craft', e.target.value)} placeholder="e.g. Pottery" /></div><div className="field-group"><label htmlFor="artisan-experience">Experience</label><input id="artisan-experience" className="field-input" value={form.experience} onChange={(e) => update('experience', e.target.value)} placeholder="e.g. 5 years" /></div></div><div className="field-group"><label htmlFor="artisan-phone">Phone Number</label><input id="artisan-phone" className="field-input" type="tel" value={form.phone} onChange={(e) => update('phone', e.target.value)} placeholder="+91 98765 43210" /></div></div>{error && <div className="error-message" role="alert">{error}</div>}<button type="submit" className="primary-button full-button">Create my profile <ArrowRight size={16} /></button></form>
   </section></main>;
 }
 
@@ -481,8 +559,8 @@ function NavItem({ path, label, icon, current }: { path: string; label: string; 
 
 function AppShell({ children, current }: { children: ReactNode; current: string }) {
   const [, setLocation] = useLocation();
-  const { artisan, language, setLanguage, resetWorkspace } = useApp();
-  return <div className="workspace noise"><aside className="sidebar"><Logo light /><nav aria-label="Main navigation">{navItems.map((item) => <NavItem {...item} key={item.path} label={ui(language, item.key)} current={current} />)}</nav><div className="sidebar-bottom"><div className="profile-row"><span className="avatar">{artisan.name ? artisan.name.split(/\s+/).map((p) => p[0]).join('').slice(0,2).toUpperCase() : 'AR'}</span><span><strong>{artisan.name || 'New Artisan'}</strong><small>{artisan.craft || 'Create your craft profile'}</small></span></div><button type="button" className="secondary-button full-button" style={{ marginTop: '0.75rem' }} onClick={() => { resetWorkspace('blank'); setLocation('/register?new=1'); }}><Plus size={14} /> {ui(language, 'create')}</button></div></aside><div className="main-area"><header className="topbar"><div className="mobile-mark"><Logo /></div><div className="topbar-context eyebrow">{current === '/dashboard' ? `Good morning, ${artisan.name.split(' ')[0]}` : ui(language, navItems.find((item) => item.path === current)?.key || 'home')}</div><div className="topbar-right"><label className="language-chip" title="Choose language"><Languages size={13} /><select value={language} onChange={(event) => setLanguage(event.target.value as Language)} aria-label="Choose language">{LANGUAGES.map((item) => <option key={item.value} value={item.value}>{item.native} — {item.label}</option>)}</select></label><button type="button" className="icon-button" onClick={() => setLocation('/profile')} aria-label="Open profile"><Bell size={17} /></button></div></header>{children}<nav className="bottom-nav" aria-label="Mobile navigation">{navItems.map((item) => <BottomNav {...item} key={item.path} label={ui(language, item.key)} current={current} />)}</nav></div></div>;
+  const { artisan, language, setLanguage, startNewProfile, workspaceMode } = useApp();
+  return <div className="workspace noise"><aside className="sidebar"><Logo light /><nav aria-label="Main navigation">{navItems.map((item) => <NavItem path={item.path} icon={item.icon} label={ui(language, item.key)} current={current} />)}</nav><div className="sidebar-bottom"><div className="profile-row"><span className="avatar">{artisan.name ? artisan.name.split(/\s+/).map((p) => p[0]).join('').slice(0,2).toUpperCase() : 'AR'}</span><span><strong>{artisan.name || (language === 'हिन्दी' ? 'नया कारीगर' : 'New Artisan')}</strong><small>{artisan.craft || (language === 'हिन्दी' ? 'अपनी शिल्प प्रोफ़ाइल बनाएं' : 'Create your craft profile')}</small></span></div><div className="form-note" style={{ marginTop: '0.5rem' }}>{workspaceMode === 'demo' ? (language === 'हिन्दी' ? 'डेमो डेटा — अलग रखा गया है' : 'Demo data — kept separate') : (language === 'हिन्दी' ? 'नई प्रोफ़ाइल — डेटा 0 से शुरू' : 'New profile — data starts from 0')}</div><button type="button" className="secondary-button full-button" style={{ marginTop: '0.75rem' }} onClick={() => { startNewProfile(); setLocation('/register?new=1'); }}><Plus size={14} /> {ui(language, 'create')}</button></div></aside><div className="main-area"><header className="topbar"><div className="mobile-mark"><Logo /></div><div className="topbar-context eyebrow">{current === '/dashboard' ? `${localizeStaticText('Good morning', language)}, ${artisan.name.split(' ')[0]}` : localizeStaticText(navItems.find((item) => item.path === current)?.label || 'Home', language)}</div><div className="topbar-right"><label className="language-chip" title="Choose language"><Languages size={13} /><select value={language} onChange={(event) => setLanguage(event.target.value as Language)} aria-label="Choose language">{LANGUAGES.map((item) => <option key={item.value} value={item.value}>{item.native} — {item.label}</option>)}</select></label><button type="button" className="icon-button" onClick={() => setLocation('/profile')} aria-label="Open profile"><Bell size={17} /></button></div></header>{children}<nav className="bottom-nav" aria-label="Mobile navigation">{navItems.map((item) => <BottomNav path={item.path} icon={item.icon} label={ui(language, item.key)} current={current} />)}</nav></div></div>;
 }
 
 function BottomNav({ path, label, icon, current }: { path: string; label: string; icon: ReactNode; current: string }) {
@@ -491,17 +569,17 @@ function BottomNav({ path, label, icon, current }: { path: string; label: string
 }
 
 function PageHeading({ eyebrow, title, description, actions }: { eyebrow: string; title: string; description: string; actions?: ReactNode }) {
-  return <div className="page-heading"><div><div className="eyebrow">{eyebrow}</div><h1 className="display">{title}</h1><p>{description}</p></div>{actions && <div className="heading-actions">{actions}</div>}</div>;
+  const { language } = useApp();
+  return <div className="page-heading"><div><div className="eyebrow">{localizeStaticText(eyebrow, language)}</div><h1 className="display">{localizeStaticText(title, language)}</h1><p>{localizeStaticText(description, language)}</p></div>{actions && <div className="heading-actions">{actions}</div>}</div>;
 }
 
 function DashboardPage() {
   const [, setLocation] = useLocation();
-  const { artisan, product, orders, selectedBuyer } = useApp();
-  const productsListed = product.name.trim() ? 1 : 0;
-  const buyerEnquiries = selectedBuyer.name.trim() ? 1 : 0;
-  const estimatedSales = orders.reduce((sum, order) => sum + order.total, 0);
-  const catalogueStrength = product.name.trim() ? 82 : 0;
-  return <AppShell current="/dashboard"><main className="content animate-rise"><PageHeading eyebrow="Your artisan dashboard" title={artisan.name ? `Good Morning, ${artisan.name.split(' ')[0]}` : 'Your Artisan Dashboard'} description="Let's grow your craft business." actions={<button type="button" className="primary-button" onClick={() => setLocation('/add-product')}><Plus size={16} /> Add new product</button>} /><div className="stats-grid">{[[String(productsListed), 'Products Listed'], [String(buyerEnquiries), 'Buyer Enquiries'], [String(orders.length), 'Orders'], [`₹${estimatedSales.toLocaleString('en-IN')}`, 'Estimated Sales']].map(([value, label]) => <div className="metric panel" key={label}><strong>{value}</strong><span>{label}</span></div>)}</div><div className="dashboard-grid" style={{ marginTop: '1rem' }}><section className="hero-card panel"><div><div className="eyebrow">Your featured craft</div><h2 className="display">{product.name || 'No product added yet'}</h2><p>{product.name ? 'Beautifully made. Clearly priced. Ready to meet its next home.' : 'Add your first product to build your digital catalogue.'}</p></div><div className="hero-stat"><span /> Catalogue strength <strong>{catalogueStrength} / 100</strong><ChevronRight size={14} /></div></section><section className="ai-coach-card panel"><span className="coach-orb"><Bot size={21} /></span><div className="eyebrow">ShilpSetu AI Coach</div><h2 className="serif">Need help with pricing, products or customers?</h2><button type="button" className="secondary-button" onClick={() => setLocation('/coach')}>Ask AI Coach <ArrowRight size={14} /></button></section></div><section className="panel panel-pad activity-panel"><div className="section-label"><h2>Recent Activity</h2><button type="button" className="text-link" onClick={() => setLocation('/orders')}>View orders</button></div>{orders.length ? <div className="activity-list">{orders.slice(0, 3).map((order) => <div key={order.id}><span className="activity-icon terracotta"><Package size={15} /></span><span>Order {order.id} from {order.buyer}</span><small>{order.status}</small></div>)}</div> : <div className="empty-state"><p>No activity yet. Create a product or receive an order to see updates here.</p></div>}</section><section className="impact-panel panel"><div><div className="eyebrow" style={{ color: '#f1d797' }}>Your impact</div><h2 className="display">{productsListed || orders.length ? 'Your digital presence is growing.' : 'Your journey starts here.'}</h2><p>Every listing makes your craft easier to find.</p></div><div className="impact-grid">{[[String(productsListed), 'Products Listed'], [String(buyerEnquiries), 'Buyer Connections'], [String(orders.length), 'Orders Received'], [`₹${estimatedSales.toLocaleString('en-IN')}`, 'Estimated Revenue'], ['13', 'Languages Supported']].map(([value, label]) => <div key={label}><strong>{value}</strong><span>{label}</span></div>)}</div></section></main></AppShell>;
+  const { artisan, product, orders, language } = useApp();
+  const t = (text: string) => localizeStaticText(text, language);
+  const firstName = artisan.name ? artisan.name.split(' ')[0] : t('New Artisan');
+  const sales = orders.reduce((sum, order) => sum + order.total, 0);
+  return <AppShell current="/dashboard"><main className="content animate-rise"><PageHeading eyebrow="Your artisan dashboard" title={`${t('Good Morning')}, ${firstName}`} description="Let's grow your craft business." actions={<button type="button" className="primary-button" onClick={() => setLocation('/add-product')}><Plus size={16} /> {t('Add new product')}</button>} /><div className="stats-grid">{[[String(product.name ? 1 : 0), t('Products Listed')], [String(orders.length ? 1 : 0), t('Buyer Enquiries')], [String(orders.length), t('Orders')], [`₹${sales.toLocaleString('en-IN')}`, t('Estimated Sales')]].map(([value, label]) => <div className="metric panel" key={label}><strong>{value}</strong><span>{label}</span></div>)}</div><div className="dashboard-grid" style={{ marginTop: '1rem' }}><section className="hero-card panel"><div><div className="eyebrow">{t('Your featured craft')}</div><h2 className="display">{product.name || t('No product yet')}</h2><p>{t('Beautifully made. Clearly priced. Ready to meet its next home.')}</p></div><div className="hero-stat"><span /> {t('Catalogue strength')} <strong>{product.name ? '82 / 100' : '0 / 100'}</strong><ChevronRight size={14} /></div></section><section className="ai-coach-card panel"><span className="coach-orb"><Bot size={21} /></span><div className="eyebrow">ShilpSetu AI Coach</div><h2 className="serif">{t('Need help with pricing, products or customers?')}</h2><button type="button" className="secondary-button" onClick={() => setLocation('/coach')}>{t('Ask AI Coach')} <ArrowRight size={14} /></button></section></div><section className="panel panel-pad activity-panel"><div className="section-label"><h2>{t('Recent Activity')}</h2><button type="button" className="text-link" onClick={() => setLocation('/orders')}>{t('View orders')}</button></div>{orders.length ? <div className="activity-list"><div><span className="activity-icon green"><Store size={15} /></span><span>{t('New buyer interested in your bamboo baskets')}</span><small>{t('Today')}</small></div><div><span className="activity-icon gold"><IndianRupee size={15} /></span><span>{t('New pricing suggestion available')}</span><small>{t('Yesterday')}</small></div><div><span className="activity-icon terracotta"><Package size={15} /></span><span>{t('Order #1024 received')}</span><small>{t('Yesterday')}</small></div></div> : <p className="aside-copy">{t('No activity yet. Add your first product to get started.')}</p>}</section><section className="impact-panel panel"><div><div className="eyebrow" style={{ color: '#f1d797' }}>{t('Your impact')}</div><h2 className="display">{t('Your digital presence is growing.')}</h2><p>{t('Every listing makes your craft easier to find.')}</p></div><div className="impact-grid">{[[String(product.name ? 1 : 0), t('Products Listed')], [String(orders.length), t('Buyer Connections')], [String(orders.length), t('Orders Received')], [`₹${sales.toLocaleString('en-IN')}`, t('Estimated Revenue')], ['13', t('Languages Supported')]].map(([value, label]) => <div key={label}><strong>{value}</strong><span>{label}</span></div>)}</div></section></main></AppShell>;
 }
 
 function AddProductPage() {
@@ -606,8 +684,9 @@ function AddProductPage() {
     setError('');
     setWorking(true);
     try {
-      const description = await speechToText(language);
-      setForm((current) => ({ ...current, description }));
+      const transcript = await speechToText(language);
+      const description = await generateProductDescription({ productName: form.name, description: transcript, language: 'English' });
+      setForm((current) => ({ ...current, description: description || transcript }));
     } catch (error) {
       setError(error instanceof Error ? error.message : 'Voice capture failed. Please try again.');
     } finally {
@@ -706,7 +785,7 @@ async function localPhotoEdit(dataUrl: string, style: string): Promise<string> {
 
 function PhotoStudioPage() {
   const [, setLocation] = useLocation();
-  const { photoReady, setPhotoReady, photoDataUrl, editedPhotoDataUrl, setEditedPhotoDataUrl, photoAnalysis, product } = useApp();
+  const { photoReady, setPhotoReady, photoDataUrl, editedPhotoDataUrl, setEditedPhotoDataUrl, photoAnalysis, setPhotoAnalysis, product } = useApp();
   const [processing, setProcessing] = useState(false);
   const [tool, setTool] = useState('Warm daylight');
   const [error, setError] = useState('');
@@ -733,7 +812,7 @@ function PhotoStudioPage() {
         const localEdited = await localPhotoEdit(photoDataUrl, style);
         setEditedPhotoDataUrl(localEdited);
         setPhotoReady(true);
-        setError('AI service is unavailable, so a local smart photo edit was applied. Add GEMINI_API_KEY for generative AI editing.');
+        setError(''); setPhotoAnalysis('Local smart photo enhancement applied because generative image AI is not configured.');
       } catch (localError) {
         setError(localError instanceof Error ? localError.message : (e instanceof Error ? e.message : 'Photo editing failed.'));
         setPhotoReady(false);
@@ -775,40 +854,89 @@ function PhotoStudioPage() {
 
 function CataloguePage() {
   const [, setLocation] = useLocation();
-  const { product, setProduct, editedPhotoDataUrl, photoDataUrl } = useApp();
-  const [language, setLanguage] = useState<Language>('English');
+  const { product, setProduct, editedPhotoDataUrl, photoDataUrl, language: appLanguage } = useApp();
+  const [language, setLanguage] = useState<Language>(appLanguage);
   const [fields, setFields] = useState({ name: product.name, category: product.category, material: product.material, craftType: product.craftType, origin: product.origin, description: product.description, story: product.story });
+  const [baseFields, setBaseFields] = useState({ name: product.name, category: product.category, material: product.material, craftType: product.craftType, origin: product.origin, description: product.description, story: product.story });
   const [notice, setNotice] = useState('');
-  const update = (key: keyof typeof fields, value: string) => setFields((current) => ({ ...current, [key]: value }));
-  const refresh = async () => { try { const description = await translateCatalogue(language, { description: fields.description, productName: fields.name }); const category = await categorizeProduct({ name: fields.name, description: fields.description, material: fields.material }); setFields((current) => ({ ...current, description, category: category || current.category })); setNotice('AI catalogue refreshed with translation and categorisation.'); } catch (e) { setNotice(e instanceof Error ? e.message : 'AI catalogue refresh failed.'); } };
+  const [translating, setTranslating] = useState(false);
+
+  const update = (key: keyof typeof fields, value: string) => {
+    setFields((current) => ({ ...current, [key]: value }));
+    if (language === 'English') setBaseFields((current) => ({ ...current, [key]: value }));
+  };
+
+  const selectLanguage = async (item: Language) => {
+    setLanguage(item);
+    setNotice('');
+    if (item === 'English') {
+      setFields(baseFields);
+      return;
+    }
+    setTranslating(true);
+    try {
+      const translated = await translateCatalogueFields(item, baseFields);
+      setFields((current) => ({ ...current, ...translated }));
+      setNotice(`Catalogue translated to ${item}.`);
+    } catch (e) {
+      setNotice(e instanceof Error ? e.message : 'Translation failed. Please try again.');
+    } finally {
+      setTranslating(false);
+    }
+  };
+
+  const refresh = async () => {
+    await selectLanguage(language);
+  };
+
   const save = () => {
     if (!fields.name.trim() || !fields.description.trim()) { setNotice('Please add a product name and description before continuing.'); return; }
-    setProduct((current) => ({ ...current, name: fields.name.trim(), category: fields.category, material: fields.material, craftType: fields.craftType, origin: fields.origin, description: fields.description.trim(), story: fields.story.trim() }));
+    setProduct((current) => ({ ...current, name: baseFields.name.trim(), category: baseFields.category, material: baseFields.material, craftType: baseFields.craftType, origin: baseFields.origin, description: baseFields.description.trim(), story: baseFields.story.trim() }));
     setLocation('/pricing');
   };
-  return <AppShell current="/add-product"><main className="content animate-rise"><PageHeading eyebrow="Create / 03" title="AI Generated Catalogue" description="Created from your photo and voice description." actions={<button type="button" className="secondary-button" onClick={() => setLocation('/photo-studio')}><ArrowLeft size={15} /> Back</button>} /><div className="form-layout"><section className="panel panel-pad"><div className="section-label"><h2>Edit your catalogue</h2><button type="button" className="secondary-button" onClick={refresh}><Sparkles size={14} /> Refresh with AI</button></div><div className="language-tabs">{(['English','हिन्दी','ਪੰਜਾਬੀ','বাংলা','ગુજરાતી','मराठी','தமிழ்','తెలుగు','ಕನ್ನಡ','മലയാളം','ଓଡ଼ିଆ','অসমীয়া','اردو'] as Language[]).map((item) => <button type="button" key={item} className={`language-tab ${language === item ? 'active' : ''}`} onClick={() => setLanguage(item)}>{item}</button>)}</div><p className="ai-source"><WandSparkles size={13} /> AI generated in seconds from your photo + voice description</p><div className="catalogue-fields"><div className="field-group"><label htmlFor="catalogue-name">Product Name</label><input id="catalogue-name" className="field-input" value={fields.name} onChange={(event) => update('name', event.target.value)} /></div><div className="form-inline"><div className="field-group"><label htmlFor="catalogue-category">Category</label><input id="catalogue-category" className="field-input" value={fields.category} onChange={(event) => update('category', event.target.value)} /></div><div className="field-group"><label htmlFor="catalogue-material">Material</label><input id="catalogue-material" className="field-input" value={fields.material} onChange={(event) => update('material', event.target.value)} /></div></div><div className="form-inline"><div className="field-group"><label htmlFor="catalogue-craft">Craft Type</label><input id="catalogue-craft" className="field-input" value={fields.craftType} onChange={(event) => update('craftType', event.target.value)} /></div><div className="field-group"><label htmlFor="catalogue-origin">Origin</label><input id="catalogue-origin" className="field-input" value={fields.origin} onChange={(event) => update('origin', event.target.value)} /></div></div><div className="field-group"><label htmlFor="catalogue-description">Description</label><textarea id="catalogue-description" className="field-input" value={fields.description} onChange={(event) => update('description', event.target.value)} /></div><div className="field-group"><label htmlFor="catalogue-story">Craft Story</label><textarea id="catalogue-story" className="field-input" value={fields.story} onChange={(event) => update('story', event.target.value)} /></div><div className="tag-row">{product.tags.map((tag) => <span className="pill pill-green" key={tag}>{tag}</span>)}</div></div>{notice && <p className="success-inline"><CircleCheck size={14} />{notice}</p>}<div className="form-actions"><button type="button" className="secondary-button" onClick={() => setNotice('All fields are ready to edit.')}>Edit</button><button type="button" className="primary-button" onClick={save}>Continue to Smart Pricing <ArrowRight size={15} /></button></div></section><aside className="catalogue-preview panel"><div className="eyebrow">Live preview / {language}</div>{(editedPhotoDataUrl || photoDataUrl) ? <img src={editedPhotoDataUrl || photoDataUrl} alt="AI prepared product" style={{ width: '100%', height: 220, objectFit: 'contain', borderRadius: 12, marginBottom: '1rem' }} /> : <BasketArt />}<div className="eyebrow" style={{ color: '#6b786e' }}>{fields.category} · {fields.origin}</div><h2 className="serif">{fields.name}</h2><p>{fields.description}</p><div className="tag-row">{product.tags.slice(0, 3).map((tag) => <span key={tag} className="pill pill-green">{tag}</span>)}</div><div className="preview-meta"><span className="price">₹{product.price.toLocaleString('en-IN')}</span><span className="pill pill-yellow"><Check size={12} /> {fields.craftType}</span></div></aside></div></main></AppShell>;
+
+  return <AppShell current="/add-product"><main className="content animate-rise"><PageHeading eyebrow="Create / 03" title="AI Generated Catalogue" description="Created from your photo and voice description." actions={<button type="button" className="secondary-button" onClick={() => setLocation('/photo-studio')}><ArrowLeft size={15} /> Back</button>} /><div className="form-layout"><section className="panel panel-pad"><div className="section-label"><h2>Edit your catalogue</h2><button type="button" className="secondary-button" onClick={() => void refresh()} disabled={translating}><Sparkles size={14} /> {translating ? 'Translating…' : 'Refresh with AI'}</button></div><div className="language-tabs">{LANGUAGES.map((item) => <button type="button" key={item.value} className={`language-tab ${language === item.value ? 'active' : ''}`} onClick={() => void selectLanguage(item.value)}>{item.native}</button>)}</div><p className="ai-source"><WandSparkles size={13} /> AI generated in seconds from your photo + voice description</p><div className="catalogue-fields"><div className="field-group"><label htmlFor="catalogue-name">Product Name</label><input id="catalogue-name" className="field-input" value={fields.name} onChange={(event) => update('name', event.target.value)} /></div><div className="form-inline"><div className="field-group"><label htmlFor="catalogue-category">Category</label><input id="catalogue-category" className="field-input" value={fields.category} onChange={(event) => update('category', event.target.value)} /></div><div className="field-group"><label htmlFor="catalogue-material">Material</label><input id="catalogue-material" className="field-input" value={fields.material} onChange={(event) => update('material', event.target.value)} /></div></div><div className="form-inline"><div className="field-group"><label htmlFor="catalogue-craft">Craft Type</label><input id="catalogue-craft" className="field-input" value={fields.craftType} onChange={(event) => update('craftType', event.target.value)} /></div><div className="field-group"><label htmlFor="catalogue-origin">Origin</label><input id="catalogue-origin" className="field-input" value={fields.origin} onChange={(event) => update('origin', event.target.value)} /></div></div><div className="field-group"><label htmlFor="catalogue-description">Description</label><textarea id="catalogue-description" className="field-input" value={fields.description} onChange={(event) => update('description', event.target.value)} /></div><div className="field-group"><label htmlFor="catalogue-story">Craft Story</label><textarea id="catalogue-story" className="field-input" value={fields.story} onChange={(event) => update('story', event.target.value)} /></div><div className="tag-row">{product.tags.map((tag) => <span className="pill pill-green" key={tag}>{tag}</span>)}</div></div>{notice && <p className="success-inline"><CircleCheck size={14} />{notice}</p>}<div className="form-actions"><button type="button" className="secondary-button" onClick={() => setNotice('All fields are ready to edit.')}>Edit</button><button type="button" className="primary-button" onClick={save}>Continue to Smart Pricing <ArrowRight size={15} /></button></div></section><aside className="catalogue-preview panel"><div className="eyebrow">Live preview / {language}</div>{(editedPhotoDataUrl || photoDataUrl) ? <img src={editedPhotoDataUrl || photoDataUrl} alt="AI prepared product" style={{ width: '100%', height: 220, objectFit: 'contain', borderRadius: 12, marginBottom: '1rem' }} /> : <BasketArt />}<div className="eyebrow" style={{ color: '#6b786e' }}>{fields.category} · {fields.origin}</div><h2 className="serif">{fields.name}</h2><p>{fields.description}</p><div className="tag-row">{product.tags.slice(0, 3).map((tag) => <span key={tag} className="pill pill-green">{tag}</span>)}</div><div className="preview-meta"><span className="price">₹{product.price.toLocaleString('en-IN')}</span><span className="pill pill-yellow"><Check size={12} /> {fields.craftType}</span></div></aside></div></main></AppShell>;
 }
 
 function PricingPage() {
   const [, setLocation] = useLocation();
-  const { product, setProduct } = useApp();
+  const { product, setProduct, language } = useApp();
   const [costs, setCosts] = useState({ material: 300, labour: 400, packaging: 50 });
   const [recommendation, setRecommendation] = useState(0);
   const [reason, setReason] = useState('Enter your costs and let AI suggest a fair selling price.');
   const [loading, setLoading] = useState(false);
   const costRef = useRef<HTMLInputElement>(null);
   const total = costs.material + costs.labour + costs.packaging;
-  const update = (key: keyof typeof costs, value: string) => setCosts((current) => ({ ...current, [key]: Math.max(0, Number(value) || 0) }));
+  const update = (key: keyof typeof costs, value: string) => {
+    const nextValue = Math.max(0, Number(value) || 0);
+    setCosts((current) => ({ ...current, [key]: nextValue }));
+    setRecommendation(0);
+    setReason('Recalculating from your current costs…');
+  };
   const getPrice = async () => {
     setLoading(true);
     try {
-      const data = await callAI('price', { product, costs, totalCost: total, artisan: 'rural Indian artisan' });
-      setRecommendation(Number(data.price) || Math.max(total, Math.round(total * 1.35)));
-      setReason(data.reason || 'AI recommendation based on your supplied costs and product context.');
-    } catch (e) { setReason(e instanceof Error ? e.message : 'Could not calculate an AI price.'); }
+      const data = await suggestPrice({ product, costs, totalCost: total, artisan: 'rural Indian artisan', language });
+      const aiPrice = Number(data) || 0;
+      if (aiPrice > 0) {
+        setRecommendation(Math.max(total, Math.round(aiPrice)));
+        setReason('AI recommendation based on your product and the costs you entered.');
+      } else {
+        const localPrice = Math.max(total, Math.round(total * 1.35 / 10) * 10);
+        setRecommendation(localPrice);
+        setReason(`Smart pricing estimate: ₹${localPrice.toLocaleString('en-IN')} based on your costs and a prototype margin.`);
+      }
+    } catch (e) {
+      const fallbackPrice = Math.max(total, Math.round(total * 1.35 / 10) * 10);
+      setRecommendation(fallbackPrice);
+      setReason(`AI is temporarily unavailable, so a 35% prototype margin estimate was used: ₹${fallbackPrice.toLocaleString('en-IN')}. You can recalculate when AI is available.`);
+    }
     finally { setLoading(false); }
   };
-  useEffect(() => { void getPrice(); }, []);
+  useEffect(() => {
+    const timer = window.setTimeout(() => { void getPrice(); }, 450);
+    return () => window.clearTimeout(timer);
+  }, [costs.material, costs.labour, costs.packaging, product.name, product.description, language]);
   const usePrice = () => { setProduct((current) => ({ ...current, price: recommendation || total })); setLocation('/product-preview'); };
   return <AppShell current="/add-product"><main className="content animate-rise"><PageHeading eyebrow="Create / 04" title="Smart Pricing Assistant" description="Know your costs. Let AI help you price your craft fairly." actions={<button type="button" className="secondary-button" onClick={() => setLocation('/catalogue')}><ArrowLeft size={15} /> Back</button>} /><div className="form-layout"><section className="panel panel-pad form-stack"><div className="price-intro"><div className="eyebrow">AI recommendation</div><h2 className="serif">A fair price respects your time.</h2><p>{reason}</p></div><div className="cost-grid"><div className="field-group"><label htmlFor="material-cost">Material Cost</label><div className="rupee-input"><span>₹</span><input ref={costRef} id="material-cost" type="number" min="0" value={costs.material} onChange={(event) => update('material', event.target.value)} /></div></div><div className="field-group"><label htmlFor="labour-cost">Labour Cost</label><div className="rupee-input"><span>₹</span><input id="labour-cost" type="number" min="0" value={costs.labour} onChange={(event) => update('labour', event.target.value)} /></div></div><div className="field-group"><label htmlFor="packaging-cost">Packaging</label><div className="rupee-input"><span>₹</span><input id="packaging-cost" type="number" min="0" value={costs.packaging} onChange={(event) => update('packaging', event.target.value)} /></div></div></div><div className="total-row"><span>Total Cost</span><strong>₹{total.toLocaleString('en-IN')}</strong></div><div className="recommendation"><span className="eyebrow">AI Recommended Selling Price</span><strong>{recommendation ? `₹${recommendation.toLocaleString('en-IN')}` : '—'}</strong><p>AI uses the product context and your supplied material, labour and packaging costs. Confirm the final price before selling.</p></div><div className="form-actions"><button type="button" className="secondary-button" onClick={() => void getPrice()} disabled={loading}>{loading ? 'AI calculating…' : 'Recalculate with AI'}</button><button type="button" className="primary-button" disabled={!recommendation || loading} onClick={usePrice}>Use ₹{recommendation || '—'} <ArrowRight size={15} /></button></div></section><aside className="panel panel-pad"><div className="eyebrow">Transparent pricing</div><div className="impact-list" style={{ marginTop: '1rem' }}><div className="impact-item"><span>Material Cost</span><strong>₹{costs.material}</strong></div><div className="impact-item"><span>Labour Cost</span><strong>₹{costs.labour}</strong></div><div className="impact-item"><span>Packaging</span><strong>₹{costs.packaging}</strong></div><div className="impact-item"><span>AI price</span><strong>₹{recommendation || '—'}</strong></div></div><p className="aside-copy">The artisan remains in control. AI recommends; you decide.</p></aside></div></main></AppShell>;
 }
@@ -867,7 +995,7 @@ function CoachPage() {
   const { product, artisan, language } = useApp();
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
-  const [messages, setMessages] = useState<{ from: 'coach' | 'you'; text: string }[]>([{ from: 'coach', text: 'Namaste! I am your AI business assistant. Ask me about pricing, products, customers, inventory, sales or your next business step.' }]);
+  const [messages, setMessages] = useState<{ from: 'coach' | 'you'; text: string }[]>([{ from: 'coach', text: 'Namaste Meena! I am your AI business assistant. Ask me about pricing, products, customers, inventory, sales or your next business step.' }]);
   const prompts = ['How should I price my product?', 'Which product should I make more?', 'How can I improve my listing?', 'How can I get more buyers?', 'How much stock should I keep?'];
   const send = async (text = input) => {
     if (!text.trim() || loading) return;
@@ -885,14 +1013,10 @@ function CoachPage() {
 }
 
 function ProfilePage() {
-  const { artisan, resetWorkspace, product, orders, selectedBuyer } = useApp();
+  const { artisan, openDemo, startNewProfile } = useApp();
   const [, setLocation] = useLocation();
   const initials = artisan.name ? artisan.name.split(/\s+/).map((p) => p[0]).join('').slice(0,2).toUpperCase() : 'AR';
-  const productsListed = product.name.trim() ? 1 : 0;
-  const buyerConnections = selectedBuyer.name.trim() ? 1 : 0;
-  const revenue = orders.reduce((sum, order) => sum + order.total, 0);
-  const createNewProfile = () => { resetWorkspace('blank'); setLocation('/register?new=1'); };
-  return <AppShell current="/profile"><main className="content animate-rise"><PageHeading eyebrow="Your artisan profile" title="Profile & Impact" description="Your artisan identity powers your catalogue, AI advice and buyer suggestions." actions={<div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}><button type="button" className="secondary-button" onClick={() => { resetWorkspace('demo'); window.location.reload(); }}>Demo Profile</button><button type="button" className="primary-button" onClick={createNewProfile}><Plus size={15} /> Create New Profile</button></div>} /><section className="panel panel-pad profile-card"><span className="profile-large">{initials}</span><div><div className="eyebrow">Active Artisan</div><h2 className="serif">{artisan.name || 'New Artisan'}</h2><p><MapPin size={14} /> {artisan.place || 'Add your village / city'}</p><p><Leaf size={14} /> {artisan.craft || 'Add your craft'}{artisan.experience ? ` · ${artisan.experience}` : ''}</p><p><Phone size={14} /> {artisan.phone || 'Add your phone number'}</p></div></section><section className="impact-panel panel" style={{ marginTop: '1rem' }}><div><div className="eyebrow" style={{ color: '#f1d797' }}>Your impact</div><h2 className="display">{productsListed || orders.length ? 'Your digital presence is growing.' : 'Your journey starts here.'}</h2></div><div className="impact-grid">{[[String(productsListed), 'Products Listed'], [String(buyerConnections), 'Buyer Connections'], [String(orders.length), 'Orders Received'], [`₹${revenue.toLocaleString('en-IN')}`, 'Estimated Revenue'], ['13', 'Languages Supported']].map(([value, label]) => <div key={label}><strong>{value}</strong><span>{label}</span></div>)}</div></section></main></AppShell>;
+  return <AppShell current="/profile"><main className="content animate-rise"><PageHeading eyebrow="Your artisan profile" title="Profile & Impact" description="Your artisan identity powers your catalogue, AI advice and buyer suggestions." actions={<div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}><button type="button" className="secondary-button" onClick={() => { openDemo(); setLocation('/dashboard'); }}>Demo Profile</button><button type="button" className="primary-button" onClick={() => { startNewProfile(); setLocation('/register?new=1'); }}><Plus size={15} /> Create New Profile</button></div>} /><section className="panel panel-pad profile-card"><span className="profile-large">{initials}</span><div><div className="eyebrow">Active Artisan</div><h2 className="serif">{artisan.name}</h2><p><MapPin size={14} /> {artisan.place}</p><p><Leaf size={14} /> {artisan.craft} · {artisan.experience}</p><p><Phone size={14} /> {artisan.phone}</p></div></section><section className="impact-panel panel" style={{ marginTop: '1rem' }}><div><div className="eyebrow" style={{ color: '#f1d797' }}>Your impact</div><h2 className="display">Your digital presence is growing.</h2></div><div className="impact-grid">{[['12', 'Products Listed'], ['27', 'Buyer Connections'], ['7', 'Orders Received'], ['₹18,500', 'Estimated Revenue'], ['3', 'Languages Supported']].map(([value, label]) => <div key={label}><strong>{value}</strong><span>{label}</span></div>)}</div></section></main></AppShell>;
 }
 
 function WorkspacePage() {

@@ -12,4 +12,4 @@ This version supports:
 Keep `GEMINI_API_KEY` in the Production environment variables. Do not put the real key in frontend code.
 
 ## Gemini image-editing note
-The app uses `gemini-2.5-flash-image` for the actual image-to-image edit. Google currently lists this image-generation model as having no free-tier availability, so if the photo-analysis features work but the actual image edit returns a billing/availability error, the Gemini API project needs image-generation billing/availability enabled. This is separate from your Vercel plan.
+The app uses `gemini-3.1-flash-image` for the actual image-to-image edit. Google currently lists this image-generation model as having no free-tier availability, so if the photo-analysis features work but the actual image edit returns a billing/availability error, the Gemini API project needs image-generation billing/availability enabled. This is separate from your Vercel plan.
