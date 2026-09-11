@@ -47,7 +47,7 @@ function localFallback(action: string, payload: any): any {
   ] };
   if (action === 'photo-analysis') return {
     name: name === 'your product' ? 'Handmade Artisan Product' : name,
-    category: 'Handicrafts', material: 'Not specified', craftType: 'Handmade', origin: 'Not specified',
+    category: payload.category || 'Handicrafts', material: payload.material || '', craftType: payload.craftType || 'Handmade', origin: payload.origin || '',
     description: description || 'A handmade artisan product ready for a marketplace listing. Add material, dimensions and care details for a stronger listing.',
     tags: ['#Handmade', '#IndianCraft', '#ArtisanMade', '#RuralCraft'],
     story: 'Made with care by an artisan. The listing can be personalised with the craft story and making process.', confidence: 50,
@@ -138,7 +138,7 @@ export default async function handler(req: any, res: any) {
     } else if (action === 'photo-analysis') {
       if (!payload.image) return json(res, 400, { error: 'Please upload a product photo.' });
       const image = imagePart(String(payload.image));
-      text = await generate([image, { text: `${systemContext('multimodal product photo analysis')}\nAnalyse this artisan product photo. Existing product name: ${payload.productName || ''}. Existing description: ${payload.description || ''}. Return JSON with: name, category, material, craftType, origin (only if known from supplied context; otherwise "Not specified"), description (60-90 words), tags (array of 4-6 short tags), story (2-3 sentences), confidence (0-100), visualAdvice (one sentence). Do not identify people. Do not invent an exact origin from appearance alone.` }], true);
+      text = await generate([image, { text: `${systemContext('multimodal product photo analysis')}\nAnalyse this artisan product photo. Existing product name: ${payload.productName || ''}. Existing description: ${payload.description || ''}. Return JSON with: name, category, material, craftType, origin (only if known from supplied context; otherwise return an empty string), description (60-90 words), tags (array of 4-6 short tags), story (2-3 sentences), confidence (0-100), visualAdvice (one sentence). Do not identify people. Do not invent an exact origin from appearance alone.` }], true);
       result = cleanJson(text);
       result.text = `AI identified this as ${result.name || 'an artisan product'} in ${result.category || 'a craft category'} with ${result.material || 'a handmade material'}. ${result.visualAdvice || ''}`.trim();
     } else if (action === 'photo-edit') {
